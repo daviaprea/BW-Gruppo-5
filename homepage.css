@@ -25,9 +25,13 @@
 }
 
 #right-aside::-webkit-scrollbar {
-    width: auto;
+    width: 10px;
 }
 
 #right-aside::-webkit-scrollbar-track {
     background: black;
 }
+
+#right-aside::-webkit-scrollbar-thumb {
+    background: rgb(80, 80, 80);
+  }
