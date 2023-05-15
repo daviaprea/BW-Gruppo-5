@@ -1,11 +1,11 @@
-#right-aside{
+#left-aside{
     display : flex;
     flex-direction : column;
     overflow : scroll;
     height: 100vh;
 }
 
-#left-aside{
+#left-screen{
     color: #b1b0b0;
     padding-left: 2vh;
 }
@@ -24,14 +24,14 @@
     margin-bottom: 8vh;
 }
 
-#right-aside::-webkit-scrollbar {
+#left-aside::-webkit-scrollbar {
     width: 10px;
 }
 
-#right-aside::-webkit-scrollbar-track {
+#left-aside::-webkit-scrollbar-track {
     background: black;
 }
 
-#right-aside::-webkit-scrollbar-thumb {
+#left-aside::-webkit-scrollbar-thumb {
     background: rgb(80, 80, 80);
   }
