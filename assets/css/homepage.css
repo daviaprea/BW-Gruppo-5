@@ -1,8 +1,7 @@
-#left-aside{
-    display : flex;
-    flex-direction : column;
-    overflow : scroll;
-    height: 100vh;
+/*layout pagina*/
+
+#center-screen {
+    overflow: scroll;
 }
 
 #left-screen{
@@ -20,9 +19,24 @@
     color: #b1b0b0;
 }
 
+/*parte asides Homepage*/
+
+#right-aside{
+    color: #b1b0b0;
+}
+
 #right-aside-title{
+    margin-top: 3vh;
     margin-bottom: 8vh;
 }
+
+#left-aside{
+    display : flex;
+    flex-direction : column;
+    overflow : scroll;
+    height: 100vh;
+}
+
 
 #left-aside::-webkit-scrollbar {
     width: 10px;
@@ -34,4 +48,34 @@
 
 #left-aside::-webkit-scrollbar-thumb {
     background: rgb(80, 80, 80);
-  }
+}
+
+/*Parte centrale */
+
+.upperButtons{
+    background: black;
+    border-radius: 100%;
+    color: gray;
+    border: none;
+    width: 25px;
+    margin-inline: 5px
+}
+
+.buttoncontainer{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    
+}
+
+#center-screen::-webkit-scrollbar {
+    width: 10px;
+}
+
+#center-screen::-webkit-scrollbar-track {
+    background: black;
+}
+
+#center-screen::-webkit-scrollbar-thumb {
+    background: rgb(80, 80, 80);
+}
+
