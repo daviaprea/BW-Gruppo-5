@@ -9,14 +9,19 @@
     padding-left: 2vh;
 }
 
+
+/*nav*/
 .nav{
     margin-top: 2vh;
-    color: rgb(122, 122, 122)
+    color: rgb(122, 122, 122) !important;
 }
 
+.navButtons{
+    color: #b1b0b0 !important;
+}
 
 .my-1{
-    color: #b1b0b0;
+    color: #b1b0b0 !important;
 }
 
 /*parte asides Homepage*/
@@ -27,7 +32,23 @@
 
 #right-aside-title{
     margin-top: 3vh;
-    margin-bottom: 8vh;
+    margin-bottom: 5vh;
+}
+
+.righterCol{
+    color: #b1b0b0;
+}
+
+.righterColText{
+    margin-bottom : 0px;
+    color: #cecece;
+    font-size: 0.75rem;
+}
+
+
+.righterP{
+    margin-top: 0;
+    margin-bottom: 0.3rem !important;
 }
 
 #left-aside{
@@ -35,6 +56,7 @@
     flex-direction : column;
     overflow : scroll;
     height: 100vh;
+    font-size: 0.9rem;
 }
 
 
@@ -64,7 +86,11 @@
 .buttoncontainer{
     margin-top: 2vh;
     margin-bottom: 2vh;
-    
+}
+
+#introduction-title-card{
+    font-size: 7vh;
+    font-weight: 600;
 }
 
 #center-screen::-webkit-scrollbar {
