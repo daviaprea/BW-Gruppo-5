@@ -37,15 +37,15 @@ const getAlbum = function () {
                         <p class="card-text text-sm text-gray-700">${songs.artist.name} . ${songs.data} . ${songs.nb_tracks} songs, ${songs.duration} mins</p>
                         <div class="buttonContainerIntroduction mt-5">
                         <button class="button-dark">
-                          <i class="ion-ios-play"></i>
-                            Play
-                          </button>
-                        
-                        <button class="button-light">Follow</button>
-                        
-                        <button class="button-light more">
-                          <i class="ion-ios-more"></i>
-                        </button>
+                        <i class="ion-ios-play"></i>
+                        Play
+                      </button>
+                      
+                      <button class="button-light">Follow</button>
+                      
+                      <button class="button-light more">
+                        <i class="ion-ios-more"></i>
+                      </button>
                         <i class="fas fa-ellipsis-h mx-2"></i>
                         </div>
                         </div>
@@ -54,16 +54,8 @@ const getAlbum = function () {
                 </div>
                 </div> 
             </div>
-            
-
-            `  
-        console.log(songs)
-    })
-
-    .then((data) => {
-        let colSong = document.getElementById("colSong");
-        colSong.innerHTML = `
-                <div class="section-title"># Titolo</div>
+            <div class="container  ">
+              <div class="section-title"># Titolo</div>
 
                 <div class="tracks">
 
@@ -71,13 +63,13 @@ const getAlbum = function () {
 
                     <div class="track__number">1</div>
 
-                    <div class="track__added">
+                    <div class="track__added" ${data.tytle}>
 
                       <i class="ion-checkmark-round added"></i>
 
                     </div>
 
-                    <div class="track__title">canzone</div>
+                    <div class="track__title"></div>
 
                     <div class="track__explicit">
 
@@ -88,130 +80,53 @@ const getAlbum = function () {
                     <div class="track__plays">13,737,506</div>
 
                   </div>
+               </div>        
+              </div>
 
-                  <div class="track">
-
-                    
-
-                    <div class="track__number">2</div>
-
-                    <div class="track__added">
-
-                      <i class="ion-plus not-added"></i>
-
-                    </div>
-
-                    <div class="track__title">canzone</div>
-
-                    <div class="track__explicit">
-
-                      <span class="label">Explicit</span>
-
-                    </div>
-
-                    <div class="track__plays">13,737,506</div>
-
-                  </div>
-
-                  <div class="track">
-
-                    <div class="track__number">3</div>
-
-                    <div class="track__added">
-
-                      <i class="ion-checkmark-round added"></i>
-
-                    </div>
-
-                    <div class="track__title">canzone</div>
-
-                    <div class="track__explicit">
-
-                      <span class="label">Explicit</span>
-
-                    </div>
-
-                    <div class="track__plays">13,737,506</div>
-
-                  </div>
-                  
-
-                  <div class="tracks">
-  
-                    <div class="track">
-  
-                      <div class="track__number">4</div>
-  
-                      <div class="track__added">
-  
-                        <i class="ion-checkmark-round added"></i>
-  
-                      </div>
-  
-                      <div class="track__title">canzone</div>
-  
-                      <div class="track__explicit">
-  
-                        <span class="label">Explicit</span>
-  
-                      </div>
-  
-                      <div class="track__plays">13,737,506</div>
-  
-                    </div>
-  
-                    <div class="track">
-  
-                      
-  
-                      <div class="track__number">5</div>
-  
-                      <div class="track__added">
-  
-                        <i class="ion-plus not-added"></i>
-  
-                      </div>
-  
-                      <div class="track__title">canzone</div>
-  
-                      <div class="track__explicit">
-  
-                        <span class="label">Explicit</span>
-  
-                      </div>
-  
-                      <div class="track__plays">13,737,506</div>
-  
-                    </div>
-  
-                    <div class="track">
-  
-                      <div class="track__number">6</div>
-  
-                      <div class="track__added">
-  
-                        <i class="ion-checkmark-round added"></i>
-  
-                      </div>
-  
-                      <div class="track__title">canzone</div>
-  
-                      <div class="track__explicit">
-  
-                        <span class="label">Explicit</span>
-  
-                      </div>
-  
-                      <div class="track__plays">13,737,506</div>
-  
-                    </div>    
             `  
-        console.log(data)
+        console.log(songs)
     })
     .catch((err) => {
-        console.log(err);
-    });
+      console.log(err);
+    })
 }
+//     .then((data) => {
+//         let colSong = document.getElementById("colSong");
+//         colSong.innerHTML = `<div class="container  ">
+//               <div class="section-title"># Titolo</div>
+
+//                 <div class="tracks">
+
+//                   <div class="track">
+
+//                     <div class="track__number">1</div>
+
+//                     <div class="track__added" ${data.tytle}>
+
+//                       <i class="ion-checkmark-round added"></i>
+
+//                     </div>
+
+//                     <div class="track__title"></div>
+
+//                     <div class="track__explicit">
+
+//                       <span class="label">Explicit</span>
+
+//                     </div>
+
+//                     <div class="track__plays">13,737,506</div>
+
+//                   </div>
+//                </div>        
+//               </div>
+//                `  
+//         console.log(data)
+//     })
+//     .catch((err) => {
+//         console.log(err);
+//     });
+// }
 
 getAlbum();
 

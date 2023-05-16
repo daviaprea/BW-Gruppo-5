@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(#c8ac47, #1c1d25);
+    background: linear-gradient(6deg, #1c1d25 50%, #c8ac47);
     font-family: 'Roboto', sans-serif;
     
     a {
@@ -10,6 +10,10 @@ body {
       }
     }
     
+}
+
+#central-card{
+  background: linear-gradient(3deg, #121212 70%, #323232)
 }
 
 .section-title {

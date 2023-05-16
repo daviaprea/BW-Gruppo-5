@@ -8,58 +8,6 @@
   height: 40px;
 }
 
-
-
-#left-screen{
-  color: #b1b0b0;
-  padding-left: 2vh;
-  
-}
-
-#fixer{
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  overflow: hidden;
-}
-
-#fixerRight{
-  position: sticky;
-  top: 0;
-}
-
-.nav{
-  margin-top: 2vh;
-  color: rgb(122, 122, 122) !important;
-}
-
-.navButtons{
-  color: #b1b0b0 !important;
-}
-
-#firstNav i {
-  font-size: 1.4rem;
-}
-#iconaStronza{
-  font-size: 1.8rem;
-}
-
-.my-2{
-  margin-bottom: 0.8rem !important;
-}
-#coloredHeart{
-  background: linear-gradient(315deg, rgba(184,178,194,1) 22%, rgba(114,36,204,1) 84%);
-  padding: 0.28rem;
-  border-radius: 3px;
-}
-#coloredBookmark{
-  background-color: #0e5326;
-  padding: 0.3rem 0.45rem;
-  color: #6bb100;
-  font-size: 0.9rem;
-  border-radius: 3px;
-}
-
 .iconsImgAside {
   display: flex;
   border-radius: 100%;
@@ -109,7 +57,7 @@
 }
 
 body {
-  background: linear-gradient(#c8ac47, #1c1d25);
+  background: linear-gradient(6deg, #1c1d25 50%, #c8ac47);
   font-family: "Roboto", sans-serif;
 }
 body a {
@@ -117,6 +65,10 @@ body a {
 }
 body a:hover {
   color: rgb(200, 200, 200);
+}
+
+#central-card {
+  background: linear-gradient(3deg, #121212 70%, #323232);
 }
 
 .section-title {
