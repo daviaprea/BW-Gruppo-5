@@ -1,3 +1,9 @@
+
+body {
+    font-family: 'Circular';
+}
+
+
 /*layout pagina*/
 
 #center-screen {
@@ -10,6 +16,17 @@
 #left-screen{
     color: #b1b0b0;
     padding-left: 2vh;
+    
+}
+
+#fixer{
+    position: sticky;
+    top: 0;
+}
+
+#fixerRight{
+    position: sticky;
+    top: 0;
 }
 
 
@@ -23,9 +40,29 @@
     color: #b1b0b0 !important;
 }
 
-.my-1{
-    color: #b1b0b0 !important;
+#firstNav i {
+    font-size: 1.4rem;
 }
+#iconaStronza{
+    font-size: 1.8rem;
+}
+
+.my-2{
+    margin-bottom: 0.8rem !important;
+}
+#coloredHeart{
+    background: linear-gradient(315deg, rgba(184,178,194,1) 22%, rgba(114,36,204,1) 84%);
+    padding: 0.28rem;
+    border-radius: 3px;
+}
+#coloredBookmark{
+    background-color: #0e5326;
+    padding: 0.3rem 0.45rem;
+    color: #6bb100;
+    font-size: 0.9rem;
+    border-radius: 3px;
+}
+
 
 /*parte asides Homepage*/
 
@@ -111,7 +148,7 @@
 }
 
 #introduction-title-card{
-    font-size: 7vh;
+    font-size: 4.5rem;
     font-weight: 600;
 }
 
