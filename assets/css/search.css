@@ -36,6 +36,7 @@ body{
     width: 10rem;
     height:10rem;
     border: none;
+    border-radius: 15px 15px 15px ;
 }
 .card-image{
     width: 100px;
@@ -44,6 +45,7 @@ body{
     position: absolute;
     right: -17px;
     bottom:-5px;
+    border-radius:  0;
   }
 }
 @media only screen and (min-width:1400px){
@@ -54,38 +56,25 @@ body{
 
 }
 
-  /*Numerazioni Cards */
-#card-1{
+  /*Colori Cards */
+.color-1{
     background-color:#27856A;
 }
-#card-2{
-    background-color:#1E3264;
+.color-2{
+    background-color: #1E3264;
 }
-#card-3{
-    background-color: #8D67AB ;
-}
-#card-4{
-    background-color:#E8115B ;
-}
-#card-5{
+.color-3{
     background-color: #8D67AB;
 }
-#card-6{
+.color-4{
+    background-color: #E8115B;
+}
+.color-5{
     background-color: #7358FF ;
 }
-#card-7{
-    background-color: #B49BC8 ;
+.color-6{
+    background-color: #148A08;
 }
-#card-8{
-    background-color:#F037A5 ;
+.color-7{
+    background-color: #E61E32;
 }
-#card-9{
-    background-color: #7358FF ;
-}
-#card-9{
-    background-color:#9CF0E1 ;
-}
-#card-10{
-    background-color: #7358FF ;
-}
-  
