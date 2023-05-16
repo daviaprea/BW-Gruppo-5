@@ -1,3 +1,131 @@
+body {
+    font-family: 'Circular';
+}
+
+
+#left-screen{
+    color: #b1b0b0;
+    padding-left: 2vh;
+    
+}
+
+#fixer{
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    height: 100vh;
+}
+
+#fixerRight{
+    position: sticky;
+    top: 0;
+}
+
+
+/*nav*/
+.nav{
+    margin-top: 2vh;
+    color: rgb(122, 122, 122) !important;
+}
+
+.navButtons{
+    color: #b1b0b0 !important;
+}
+
+#firstNav i {
+    font-size: 1.4rem;
+}
+#iconaStronza{
+    font-size: 1.8rem;
+}
+
+.my-2{
+    margin-bottom: 0.8rem !important;
+}
+#coloredHeart{
+    background: linear-gradient(315deg, rgba(184,178,194,1) 22%, rgba(114,36,204,1) 84%);
+    padding: 0.28rem;
+    border-radius: 3px;
+}
+#coloredBookmark{
+    background-color: #0e5326;
+    padding: 0.3rem 0.45rem;
+    color: #6bb100;
+    font-size: 0.9rem;
+    border-radius: 3px;
+}
+
+
+/*parte asides Homepage*/
+
+#right-aside{
+    color: #b1b0b0;
+}
+.aside-icons{
+    border-radius: 100% !important;
+    width: 40px;
+    height: 40px;
+}
+.iconsImgAside{
+    display: flex;
+    border-radius: 100%;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+#right-aside-title{
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+}
+
+.righterCol{
+    color: #b1b0b0;
+    font-weight: bolder;
+}
+
+.righterColText{
+    margin-bottom : 0px;
+    color: rgb(122, 122, 122);
+    font-size: 0.75rem;
+}
+
+
+.righterP{
+    margin-top: 0;
+    margin-bottom: 0.3rem !important;
+}
+
+#left-aside{
+    display : flex;
+    flex-direction : column;
+    overflow : scroll;
+    height: 100vh;
+    font-size: 0.9rem;
+}
+
+
+#left-aside::-webkit-scrollbar {
+    width: 10px;
+}
+
+#left-aside::-webkit-scrollbar-track {
+    background: black;
+}
+
+#left-aside::-webkit-scrollbar-thumb {
+    background: rgb(80, 80, 80);
+}
+
+
+
+
+
+
+
+
+/* CSS GABRIELE */
+
 #artist-information {
     height: 300px;
 }
