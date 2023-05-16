@@ -89,11 +89,12 @@ body {
 
 .righterCol{
     color: #b1b0b0;
+    font-weight: bolder;
 }
 
 .righterColText{
     margin-bottom : 0px;
-    color: #cecece;
+    color: rgb(122, 122, 122);
     font-size: 0.75rem;
 }
 
