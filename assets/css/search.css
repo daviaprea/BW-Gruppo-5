@@ -8,6 +8,7 @@ body{
 .card{
     border-radius: 0;
     border: none;
+
 }
 
 @media only screen and (max-width: 576px){
@@ -48,12 +49,9 @@ body{
 @media only screen and (min-width:1400px){
 .col-xxl-1{
     margin-right: 3rem;
+    padding: 0;
     }
-.card{
-    width: 12rem;
-    height:12rem;
-    border: none;
-}
+
 }
 
   /*Numerazioni Cards */
@@ -68,5 +66,26 @@ body{
 }
 #card-4{
     background-color:#E8115B ;
+}
+#card-5{
+    background-color: #8D67AB;
+}
+#card-6{
+    background-color: #7358FF ;
+}
+#card-7{
+    background-color: #B49BC8 ;
+}
+#card-8{
+    background-color:#F037A5 ;
+}
+#card-9{
+    background-color: #7358FF ;
+}
+#card-9{
+    background-color:#9CF0E1 ;
+}
+#card-10{
+    background-color: #7358FF ;
 }
   
