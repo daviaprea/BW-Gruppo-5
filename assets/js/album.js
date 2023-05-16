@@ -54,40 +54,6 @@ const getAlbum = function () {
                     </div>
                 </div>
                 </div> 
-<<<<<<< HEAD
-            </div>
-            <div class="container  ">
-              <div class="section-title"># Titolo</div>
-
-                <div class="tracks">
-
-                  <div class="track">
-
-                    <div class="track__number">1</div>
-
-                    <div class="track__added" ${data.tytle}>
-
-                      <i class="ion-checkmark-round added"></i>
-
-                    </div>
-
-                    <div class="track__title"></div>
-
-                    <div class="track__explicit">
-
-                      <span class="label">Explicit</span>
-
-                    </div>
-
-                    <div class="track__plays">13,737,506</div>
-
-                  </div>
-               </div>        
-              </div>
-
-            `  
-        console.log(songs)
-=======
             </div>`
         
             let colSong = document.querySelector(".tracks");
@@ -118,7 +84,6 @@ const getAlbum = function () {
                       </div>
                 `
             });
->>>>>>> origin/Davide-Branch
     })
     .catch((err) => {
       console.log(err);
