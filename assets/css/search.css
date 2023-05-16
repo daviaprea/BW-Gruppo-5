@@ -1,0 +1,91 @@
+body{
+    background-color: #121212;
+}
+.card-body{
+    position: relative;
+    overflow: hidden;
+}
+.card{
+    border-radius: 0;
+    border: none;
+
+}
+
+@media only screen and (max-width: 576px){
+    .card{
+        width: auto;
+        height: 6rem;
+        border: none;
+    }
+   .card-image{
+        
+        width: 60px;
+        height: 60px;
+        rotate: 20deg;
+        position: absolute;
+        left: 90px;
+        bottom: -5px;
+        border-radius: 5px;
+    }
+    #title-page{
+     text-align: center;
+    }
+}
+@media only screen and (min-width: 576px){
+.card{
+    width: 10rem;
+    height:10rem;
+    border: none;
+}
+.card-image{
+    width: 100px;
+    height: 100px;
+    rotate: 20deg;
+    position: absolute;
+    right: -17px;
+    bottom:-5px;
+  }
+}
+@media only screen and (min-width:1400px){
+.col-xxl-1{
+    margin-right: 3rem;
+    padding: 0;
+    }
+
+}
+
+  /*Numerazioni Cards */
+#card-1{
+    background-color:#27856A;
+}
+#card-2{
+    background-color:#1E3264;
+}
+#card-3{
+    background-color: #8D67AB ;
+}
+#card-4{
+    background-color:#E8115B ;
+}
+#card-5{
+    background-color: #8D67AB;
+}
+#card-6{
+    background-color: #7358FF ;
+}
+#card-7{
+    background-color: #B49BC8 ;
+}
+#card-8{
+    background-color:#F037A5 ;
+}
+#card-9{
+    background-color: #7358FF ;
+}
+#card-9{
+    background-color:#9CF0E1 ;
+}
+#card-10{
+    background-color: #7358FF ;
+}
+  
