@@ -2,7 +2,9 @@
 
 #center-screen {
     overflow: scroll;
-    background-color: #121212 !important;
+    background: linear-gradient(1deg, #000000 60%, #363636);
+    padding-inline: 3vh;
+
 }
 
 #left-screen{
@@ -85,7 +87,10 @@
     background: rgb(80, 80, 80);
 }
 
+
+
 /*Parte centrale */
+
 
 .upperButtons{
     background: black;
@@ -122,6 +127,12 @@
     background: rgb(80, 80, 80);
 }
 
+#center-screen::-webkit-scrollbar-button {
+    display: none !important;
+    background-color: black !important;
+}
+  
+
 #cardTitle{
     font-size: 1rem;
 }
@@ -142,4 +153,56 @@
     background-color: #000000;
     color: white !important;
     font-weight: 600;
+}
+
+#buonaseraTitle{
+    font-weight: 700;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
+.cardCentralBuonasera{
+    display: flex;
+    background-color:#171717;
+    color: white;
+    font-weight: 700;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.buonaseraCard{
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.cardRightSideBuonasera{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.centralPlaylistCard{
+    width: 13rem !important;
+    padding: 0.75rem;
+    background-color: #171717;
+    color: white;
+}
+.centralPlaylistCardBody{
+    padding: 0.6rem;
+}
+
+.colCentralPlaylistCard{
+    margin-right: 0rem;
+}
+.cardP{
+    color: gray;
 }
