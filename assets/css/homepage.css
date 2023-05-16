@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-#right-aside{
-    display : flex;
-    flex-direction : column;
-    overflow : scroll;
-    height: 100vh;
-}
-
-#left-aside{
-=======
 /*layout pagina*/
 
 #center-screen {
@@ -16,33 +6,10 @@
 }
 
 #left-screen{
->>>>>>> origin/Branch-Gerald
     color: #b1b0b0;
     padding-left: 2vh;
 }
 
-<<<<<<< HEAD
-.nav{
-    margin-top: 2vh;
-    color: rgb(122, 122, 122)
-}
-
-
-.my-1{
-    color: #b1b0b0;
-}
-
-#right-aside-title{
-    margin-bottom: 8vh;
-}
-
-#right-aside::-webkit-scrollbar {
-    width: auto;
-}
-
-#right-aside::-webkit-scrollbar-track {
-    background: black;
-=======
 
 /*nav*/
 .nav{
@@ -175,5 +142,4 @@
     background-color: #000000;
     color: white !important;
     font-weight: 600;
->>>>>>> origin/Branch-Gerald
 }
