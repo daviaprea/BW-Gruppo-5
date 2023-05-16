@@ -1,7 +1,7 @@
-const striveUrl = "https://striveschool-api.herokuapp.com/api/deezer/album/75621062";
+const striveUrl = "https://striveschool-api.herokuapp.com/api/deezer/album/";
 const key = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDYyM2M3ODc3NTgzYzAwMTRkMmNjYmMiLCJpYXQiOjE2ODQxNTk2MDksImV4cCI6MTY4NTM2OTIwOX0.RK6RE8424MDCQbvs8u0gvKiPo4MrR6-ww1HYYA6TexE";
 let urlParams = new URLSearchParams(window.location.search);
-let artistAlbum = urlParams.get("artistAlbum");
+let artistAlbum = urlParams.get("albumId");
 
 const getAlbum = function () {
     fetch(striveUrl + artistAlbum, {
@@ -21,6 +21,7 @@ const getAlbum = function () {
     })
 
     .then((songs) => {
+        console.log(songs)
         let colCove = document.getElementById("colCove");
         colCove.innerHTML = `
                 <div class="row">
@@ -53,160 +54,36 @@ const getAlbum = function () {
                     </div>
                 </div>
                 </div> 
-            </div>
-            
+            </div>`
+        
+            let colSong = document.querySelector(".tracks");
 
-            `  
-        console.log(songs)
-    })
-
-    .then((data) => {
-        let colSong = document.getElementById("colSong");
-        colSong.innerHTML = `
-                <div class="section-title"># Titolo</div>
-
-                <div class="tracks">
-
-                  <div class="track">
-
-                    <div class="track__number">1</div>
-
-                    <div class="track__added">
-
-                      <i class="ion-checkmark-round added"></i>
-
-                    </div>
-
-                    <div class="track__title">canzone</div>
-
-                    <div class="track__explicit">
-
-                      <span class="label">Explicit</span>
-
-                    </div>
-
-                    <div class="track__plays">13,737,506</div>
-
-                  </div>
-
-                  <div class="track">
-
-                    
-
-                    <div class="track__number">2</div>
-
-                    <div class="track__added">
-
-                      <i class="ion-plus not-added"></i>
-
-                    </div>
-
-                    <div class="track__title">canzone</div>
-
-                    <div class="track__explicit">
-
-                      <span class="label">Explicit</span>
-
-                    </div>
-
-                    <div class="track__plays">13,737,506</div>
-
-                  </div>
-
-                  <div class="track">
-
-                    <div class="track__number">3</div>
-
-                    <div class="track__added">
-
-                      <i class="ion-checkmark-round added"></i>
-
-                    </div>
-
-                    <div class="track__title">canzone</div>
-
-                    <div class="track__explicit">
-
-                      <span class="label">Explicit</span>
-
-                    </div>
-
-                    <div class="track__plays">13,737,506</div>
-
-                  </div>
-                  
-
-                  <div class="tracks">
-  
-                    <div class="track">
-  
-                      <div class="track__number">4</div>
-  
-                      <div class="track__added">
-  
-                        <i class="ion-checkmark-round added"></i>
-  
+            songs.tracks.data.forEach((el, i) => {
+              let sec=String((el.duration%60)*60)
+              colSong.innerHTML += `
+                      <div class="track">
+    
+                        <div class="track__number">${i}</div>
+    
+                        <div class="track__added">
+    
+                          <i class="ion-checkmark-round added"></i>
+    
+                        </div>
+    
+                        <div class="track__title">${el.title}</div>
+    
+                        <div class="track__explicit">
+    
+                          <span class="label">${Math.floor(Math.random()*100_000_000)+10_000_000}</span>
+    
+                        </div>
+    
+                        <div class="track__plays">${Math.trunc(el.duration/60)}:${sec.slice(0,2)}</div>
+    
                       </div>
-  
-                      <div class="track__title">canzone</div>
-  
-                      <div class="track__explicit">
-  
-                        <span class="label">Explicit</span>
-  
-                      </div>
-  
-                      <div class="track__plays">13,737,506</div>
-  
-                    </div>
-  
-                    <div class="track">
-  
-                      
-  
-                      <div class="track__number">5</div>
-  
-                      <div class="track__added">
-  
-                        <i class="ion-plus not-added"></i>
-  
-                      </div>
-  
-                      <div class="track__title">canzone</div>
-  
-                      <div class="track__explicit">
-  
-                        <span class="label">Explicit</span>
-  
-                      </div>
-  
-                      <div class="track__plays">13,737,506</div>
-  
-                    </div>
-  
-                    <div class="track">
-  
-                      <div class="track__number">6</div>
-  
-                      <div class="track__added">
-  
-                        <i class="ion-checkmark-round added"></i>
-  
-                      </div>
-  
-                      <div class="track__title">canzone</div>
-  
-                      <div class="track__explicit">
-  
-                        <span class="label">Explicit</span>
-  
-                      </div>
-  
-                      <div class="track__plays">13,737,506</div>
-  
-                    </div>    
-            `  
-        console.log(data)
+                `
+            });
     })
     .catch((err) => {
         console.log(err);
