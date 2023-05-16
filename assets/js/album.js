@@ -36,8 +36,16 @@ const getAlbum = function () {
                         <p class="card-title" id="introduction-title-card">${songs.title} </p>
                         <p class="card-text text-sm text-gray-700">${songs.artist.name} . ${songs.data} . ${songs.nb_tracks} songs, ${songs.duration} mins</p>
                         <div class="buttonContainerIntroduction mt-5">
-                        <button type="button" class="btn mx-2" id="introButtonPlay">Play</button>
-                        <button type="button" class="btn btn-outline-dark mx-2" id="introButtonSalva">Salva</button>
+                        <button class="button-dark">
+                          <i class="ion-ios-play"></i>
+                            Play
+                          </button>
+                        
+                        <button class="button-light">Follow</button>
+                        
+                        <button class="button-light more">
+                          <i class="ion-ios-more"></i>
+                        </button>
                         <i class="fas fa-ellipsis-h mx-2"></i>
                         </div>
                         </div>
