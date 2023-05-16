@@ -1,3 +1,8 @@
+p.card-title{
+  font-size: 4rem;
+  font-weight: bold;
+}
+
 #right-aside {
   color: #b1b0b0;
 }
