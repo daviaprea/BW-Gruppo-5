@@ -158,27 +158,3 @@ getAlbum();
             //         <a class="p-2 w-8 flex-shrink-0">5:46</a>
             //     </div>  */}
 
-{/* <div class="flex">
-        //     <img class="mr-6" src="${songs.cover}">
-        //     <div class="flex flex-col justify-center">
-        //     <h4 class="mt-0 mb-2 text-gray-500 text-xs">Album</h4>
-        //     <h1 class="mt-0 mb-2 text-white ">${songs.title}</h1>
-        //     <p class="text-gray-600 text-sm">${songs.name}  - 50 songs, ${songs.duration}</p>
-        // </div>
-        
-        // <div class="flex text-gray-600">
-        //     <div class="flex text-gray-600">
-        //     <div class="p-2 w-8 flex-shrink-0"></div>
-        //     <div class="p-2 w-8 flex-shrink-0"></div>
-        //     <div class="p-2 w-full">Titolo</div>
-        //     <div class="p-2 w-full">RIPRODUZIONI</div>
-        //     <div class="p-2 w-12 flex-shrink-0 text-right">⏱</div>
-        // </div>
-      
-        // <div class="flex border-b border-gray-800 hover:bg-gray-800">
-        //     <div class="p-3 w-8 flex-shrink-0">  </div>
-        //     <div class="p-3 w-full">${songs.title}</div>
-        //     <div class="p-3 w-full">${songs.name}</div>
-        //     <div class="p-3 w-full">${songs.fans}</div>
-        //     <div class="p-3 w-12 flex-shrink-0 text-right">${songs.duration}</div>
-        // </div> */}
