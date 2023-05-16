@@ -30,11 +30,11 @@ const getAlbum = function () {
                     <div class="col-md-3 my-4">
                         <img src="${songs.cover}" class="img-fluid rounded-start" alt="Album cover">
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-8 text-dark">
                         <div class="card-body">
                         <h5 id="cardTitle" class="card-title">${songs.type}</h5>
                         <p class="card-title" id="introduction-title-card">${songs.title} </p>
-                        <p class="card-text text-sm text-gray-700">${songs.artist.name} . ${songs.artist.data} . ${songs.nb_tracks} songs, ${songs.duration} mins</p>
+                        <p class="card-text text-sm text-gray-700">${songs.artist.name} . ${songs.data} . ${songs.nb_tracks} songs, ${songs.duration} mins</p>
                         <div class="buttonContainerIntroduction mt-5">
                         <button type="button" class="btn mx-2" id="introButtonPlay">Play</button>
                         <button type="button" class="btn btn-outline-dark mx-2" id="introButtonSalva">Salva</button>
@@ -52,66 +52,153 @@ const getAlbum = function () {
         console.log(songs)
     })
 
-    .then((songs) => {
+    .then((data) => {
         let colSong = document.getElementById("colSong");
         colSong.innerHTML = `
-                <div class="row">
-                    <div class="col">
-                    <div class="album__tracks">
-                            
-                    <div class="tracks">
-                    
-                    <div class="tracks__heading">
-                    
-                        <div class="tracks__heading__number">#</div>
-                        
-                        <div class="tracks__heading__title">Song</div>
-                        
-                        <div class="tracks__heading__length">
-                        
-                        <i class="ion-ios-stopwatch-outline"></i>
-                        
-                        </div>
-                        
-                        <div class="tracks__heading__popularity">
-                        
-                        <i class="ion-thumbsup"></i>
-                        
-                        </div>
-                        
+                <div class="section-title"># Titolo</div>
+
+                <div class="tracks">
+
+                  <div class="track">
+
+                    <div class="track__number">1</div>
+
+                    <div class="track__added">
+
+                      <i class="ion-checkmark-round added"></i>
+
                     </div>
 
+                    <div class="track__title">canzone</div>
+
+                    <div class="track__explicit">
+
+                      <span class="label">Explicit</span>
+
+                    </div>
+
+                    <div class="track__plays">13,737,506</div>
+
+                  </div>
+
+                  <div class="track">
+
+                    
+
+                    <div class="track__number">2</div>
+
+                    <div class="track__added">
+
+                      <i class="ion-plus not-added"></i>
+
+                    </div>
+
+                    <div class="track__title">canzone</div>
+
+                    <div class="track__explicit">
+
+                      <span class="label">Explicit</span>
+
+                    </div>
+
+                    <div class="track__plays">13,737,506</div>
+
+                  </div>
+
+                  <div class="track">
+
+                    <div class="track__number">3</div>
+
+                    <div class="track__added">
+
+                      <i class="ion-checkmark-round added"></i>
+
+                    </div>
+
+                    <div class="track__title">canzone</div>
+
+                    <div class="track__explicit">
+
+                      <span class="label">Explicit</span>
+
+                    </div>
+
+                    <div class="track__plays">13,737,506</div>
+
+                  </div>
+                  
+
+                  <div class="tracks">
+  
                     <div class="track">
-
-                        <div class="track__number">1</div>
-
-                        <div class="track__added">
-
+  
+                      <div class="track__number">4</div>
+  
+                      <div class="track__added">
+  
                         <i class="ion-checkmark-round added"></i>
-
-                        </div>
-
-                        <div class="track__title">Intro</div>
-
-                        <div class="track__explicit">
-
+  
+                      </div>
+  
+                      <div class="track__title">canzone</div>
+  
+                      <div class="track__explicit">
+  
                         <span class="label">Explicit</span>
-
-                        </div>
-                        
-                        <div class="track__length">1:11</div>
-                        
-                        <div class="track__popularity">
-                        
-                        <i class="ion-arrow-graph-up-right"></i>
-                        
-                        </div>
-
+  
+                      </div>
+  
+                      <div class="track__plays">13,737,506</div>
+  
                     </div>
+  
+                    <div class="track">
+  
+                      
+  
+                      <div class="track__number">5</div>
+  
+                      <div class="track__added">
+  
+                        <i class="ion-plus not-added"></i>
+  
+                      </div>
+  
+                      <div class="track__title">canzone</div>
+  
+                      <div class="track__explicit">
+  
+                        <span class="label">Explicit</span>
+  
+                      </div>
+  
+                      <div class="track__plays">13,737,506</div>
+  
                     </div>
-                </div>
+  
+                    <div class="track">
+  
+                      <div class="track__number">6</div>
+  
+                      <div class="track__added">
+  
+                        <i class="ion-checkmark-round added"></i>
+  
+                      </div>
+  
+                      <div class="track__title">canzone</div>
+  
+                      <div class="track__explicit">
+  
+                        <span class="label">Explicit</span>
+  
+                      </div>
+  
+                      <div class="track__plays">13,737,506</div>
+  
+                    </div>    
             `  
-        console.log(songs)
+        console.log(data)
     })
     .catch((err) => {
         console.log(err);
