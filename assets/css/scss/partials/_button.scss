@@ -1,0 +1,36 @@
+button {
+    border-radius: 20px;
+    border: none;
+    padding: $padding-xs $padding;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: $x-small;
+    outline: none;
+    
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  
+  .button-dark {
+    background: $green;
+    color: $white;
+    border: 1px solid $green;
+    
+    &:hover {
+      background: lighten( $green, 10% );
+    }
+  }
+  
+  .button-light {
+    background: none;
+    color: $sand;
+    border: 1px solid $sand;
+    
+    &:hover {
+      border-color: $white;
+      color: $white;
+    }
+  }
+  
+  

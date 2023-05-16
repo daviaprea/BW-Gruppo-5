@@ -120,7 +120,11 @@ body a:hover {
 }
 
 .section-title {
-  padding-left: 5%;
+  text-transform: uppercase;
+  color: rgb(170, 170, 170);
+  letter-spacing: 1.25px;
+  font-size: 13.2px;
+  margin-bottom: 10px;
 }
 
 .tracks {
@@ -251,4 +255,35 @@ body a:hover {
   .tracks .track__popularity {
     display: none;
   }
+}
+button {
+  border-radius: 20px;
+  border: none;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 11px;
+  outline: none;
+}
+button:hover {
+  cursor: pointer;
+}
+
+.button-dark {
+  background: rgb(30, 215, 96);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(30, 215, 96);
+}
+.button-dark:hover {
+  background: #43e57d;
+}
+
+.button-light {
+  background: none;
+  color: rgb(200, 200, 200);
+  border: 1px solid rgb(200, 200, 200);
+}
+.button-light:hover {
+  border-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
 }/*# sourceMappingURL=album.css.map */
