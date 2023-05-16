@@ -8,6 +8,58 @@
   height: 40px;
 }
 
+
+
+#left-screen{
+  color: #b1b0b0;
+  padding-left: 2vh;
+  
+}
+
+#fixer{
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#fixerRight{
+  position: sticky;
+  top: 0;
+}
+
+.nav{
+  margin-top: 2vh;
+  color: rgb(122, 122, 122) !important;
+}
+
+.navButtons{
+  color: #b1b0b0 !important;
+}
+
+#firstNav i {
+  font-size: 1.4rem;
+}
+#iconaStronza{
+  font-size: 1.8rem;
+}
+
+.my-2{
+  margin-bottom: 0.8rem !important;
+}
+#coloredHeart{
+  background: linear-gradient(315deg, rgba(184,178,194,1) 22%, rgba(114,36,204,1) 84%);
+  padding: 0.28rem;
+  border-radius: 3px;
+}
+#coloredBookmark{
+  background-color: #0e5326;
+  padding: 0.3rem 0.45rem;
+  color: #6bb100;
+  font-size: 0.9rem;
+  border-radius: 3px;
+}
+
 .iconsImgAside {
   display: flex;
   border-radius: 100%;
@@ -68,7 +120,11 @@ body a:hover {
 }
 
 .section-title {
-  padding-left: 5%;
+  text-transform: uppercase;
+  color: rgb(170, 170, 170);
+  letter-spacing: 1.25px;
+  font-size: 13.2px;
+  margin-bottom: 10px;
 }
 
 .tracks {
@@ -199,4 +255,35 @@ body a:hover {
   .tracks .track__popularity {
     display: none;
   }
+}
+button {
+  border-radius: 20px;
+  border: none;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 11px;
+  outline: none;
+}
+button:hover {
+  cursor: pointer;
+}
+
+.button-dark {
+  background: rgb(30, 215, 96);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(30, 215, 96);
+}
+.button-dark:hover {
+  background: #43e57d;
+}
+
+.button-light {
+  background: none;
+  color: rgb(200, 200, 200);
+  border: 1px solid rgb(200, 200, 200);
+}
+.button-light:hover {
+  border-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
 }/*# sourceMappingURL=album.css.map */
