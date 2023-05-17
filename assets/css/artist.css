@@ -169,10 +169,17 @@ body {
     background-color: #3cd75f;
     border: none;
     border-radius: 100%;
+    width: 40px;
+    height: 40px;
+}
+
+#play-button:hover {
+    width: 41px;
+    height: 41px;
 }
 
 #play-button i {
-    padding: 12px 10px;
+    padding: 10px;
 }
 
 #following-button {
@@ -186,10 +193,18 @@ body {
     margin-left: 20px;
 }
 
+#following-button:hover {
+    border: 2px solid #fff;
+}
+
 #dots {
     margin-left: 20px;
     color: rgb(142, 140, 140);
     cursor: pointer;
+}
+
+#dots:hover {
+    color: #fff;
 }
 
 #popular-songs div {
