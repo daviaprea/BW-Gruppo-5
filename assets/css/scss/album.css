@@ -119,9 +119,12 @@ body a:hover {
 }
 
 .track {
+<<<<<<< HEAD
   border-top: 0px;
 }
 .track {
+=======
+>>>>>>> origin/Branch-Gerald
   height: 42px;
   display: flex;
   flex-flow: row wrap;
@@ -231,6 +234,13 @@ body a:hover {
     display: none;
   }
 }
+.controls {
+  width: 346px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
 button {
   border-radius: 20px;
   border: none;
