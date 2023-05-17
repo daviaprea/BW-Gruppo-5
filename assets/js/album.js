@@ -52,7 +52,7 @@ const getAlbum = function () {
                       <div class="track">
     
                         <div class="track__number">${i+1}</div>
-                        <button class="play-btn" onclick="playSong(${i})">Play</button>
+                        progress
                         <div class="track__title fw-bold">${el.title}</div>
     
                         <div class="track__explicit">
@@ -61,18 +61,25 @@ const getAlbum = function () {
     
                         </div>
                         <div class="controls">
-                        <div>
-                        <audio controls>
-                            <source src="${el.preview}" type="audio/mp3">
-                        </audio> 
-                        </div>
-                        </div>
-                        <div class="track__plays">${Math.trunc(el.duration/60)}:${sec.slice(0,2)}</div>
+                            <div>
+                            <audio id="audio_${i}" src="${el.preview}" type="audio/mp3"></audio>
+                            <button onclick="playSong(${i})">Play</button> 
+                            </div>
+                            </div>
+                            <div class="track__plays">${Math.trunc(el.duration/60)}:${sec.slice(0,2)}</div>
                         
                       </div>
                 `
             
             });
+            function playSong(index) {
+                const audio = document.getElementById(`audio_${index}`);
+                if (audio.paused) {
+                    audio.play();
+                } else {
+                    audio.pause();
+                }
+            }
           
     })
     .catch((err) => {
