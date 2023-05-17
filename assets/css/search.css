@@ -1,6 +1,30 @@
 body{
     background-color: #121212;
 }
+
+#search{
+    border-radius: 20px;
+    border: 0;
+    padding: 5px 30px;
+    background-color: #1B1B1B;
+    color: white;
+}
+
+.search-icon{
+    position: absolute;
+    left: 8px;
+    top: 30%;
+}
+
+.artist-side-search{
+    background-color: #1B1B1B;
+    border-radius: 10px;
+}
+
+.artist-search-img{
+    box-shadow: 0 0 15px 5px rgb(15, 15, 15);
+}
+
 .card-body{
     position: relative;
     overflow: hidden;
@@ -8,7 +32,6 @@ body{
 .card{
     border-radius: 0;
     border: none;
-
 }
 
 @media only screen and (max-width: 576px){
