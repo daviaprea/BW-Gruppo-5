@@ -34,7 +34,7 @@ const getAlbum = function () {
                     <div class="col-md-8 text-white d-flex">
                         <div class="card-body align-self-end">
                         <h5 id="cardTitle" class="card-title fw-bold">${songs.type.toUpperCase()}</h5>
-                        <p class="card-title" id="introduction-title-card">${songs.title}</p>
+                        <p class="" id="introduction-title-card">${songs.title}</p>
                         <p class="card-text text-sm text-gray-700">${songs.artist.name} . ${songs.release_date} . ${songs.nb_tracks} songs, ${songs.duration} mins</p>
                         
                         </div>
@@ -68,9 +68,46 @@ const getAlbum = function () {
             });
     })
     .catch((err) => {
-        console.log(err);
-    });
+      console.log(err);
+    })
 }
+//     .then((data) => {
+//         let colSong = document.getElementById("colSong");
+//         colSong.innerHTML = `<div class="container  ">
+//               <div class="section-title"># Titolo</div>
+
+//                 <div class="tracks">
+
+//                   <div class="track">
+
+//                     <div class="track__number">1</div>
+
+//                     <div class="track__added" ${data.tytle}>
+
+//                       <i class="ion-checkmark-round added"></i>
+
+//                     </div>
+
+//                     <div class="track__title"></div>
+
+//                     <div class="track__explicit">
+
+//                       <span class="label">Explicit</span>
+
+//                     </div>
+
+//                     <div class="track__plays">13,737,506</div>
+
+//                   </div>
+//                </div>        
+//               </div>
+//                `  
+//         console.log(data)
+//     })
+//     .catch((err) => {
+//         console.log(err);
+//     });
+// }
 
 getAlbum();
 

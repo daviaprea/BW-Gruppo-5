@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(#c8ac47, #1c1d25);
+    background: linear-gradient(6deg, #1c1d25 50%, #c8ac47);
     font-family: 'Roboto', sans-serif;
     
     a {
@@ -12,6 +12,14 @@ body {
     
 }
 
+  #central-card{
+    background: none;
+      img {
+        box-shadow: black 55px 55px;
+      }
+  }
+
+
 .section-title {
     
   text-transform: uppercase;
@@ -20,6 +28,10 @@ body {
   font-size: $x-small * 1.2;
   margin-bottom: $margin-sm;
   
+}
+
+.linea {
+  color: $black;
 }
 
 .tracks {
@@ -68,7 +80,7 @@ body {
 }
 
 .track {
-    
+    border-top: 0px;
     & {
       height: 42px;
       display: flex;
@@ -194,9 +206,21 @@ body {
       color: $grey;
     }
     
+  } 
+
+  #introduction-title-card {
+    font-size: 4rem;
+    font-weight: bold;
   }
   
-
+    .col-md-3 {
+      flex: 0 0 auto;
+      width: 15%;
+    }
+    
+    .card-title {
+      font-size: small;
+    }
 
   @media (max-width: 1200px) {
     
