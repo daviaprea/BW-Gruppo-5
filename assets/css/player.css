@@ -72,3 +72,12 @@
 .right-volume, .slider-volume, .slider-volume progress{
     width: 80px;
 }
+
+@media screen and (max-width: 760px){
+    #player{
+    position: fixed;
+    width: 100%;
+    bottom: 80px;
+    background-color: #181818;
+    }
+}
