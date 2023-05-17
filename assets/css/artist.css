@@ -218,6 +218,10 @@ body {
     margin: 0;
 }
 
+.artist-song-content{
+    width: 50%;
+}
+
 /*#popular-songs img {
     margin-left: 10px;
 }*/
