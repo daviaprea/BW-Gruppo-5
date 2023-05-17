@@ -24,38 +24,26 @@ const getAlbum = function () {
         console.log(songs)
         let colCove = document.getElementById("colCove");
         colCove.innerHTML = `
-                <div class="row">
+                <div class="row flex-grow-1">
                 <div class="col">
-                <div class="card mb-3 p-2 text-light" id="central-card">
+                <div class="card mb-3 p-2 text-light bg-transparent border-0" id="central-card">
                     <div class="row g-0">
-                    <div class="col-md-3 my-4">
-                        <img src="${songs.cover}" class="img-fluid rounded-start" alt="Album cover">
+                    <div class="col-md-3">
+                        <img src="${songs.cover_medium}" class="img-fluid rounded-start shadow-lg" alt="Album cover">
                     </div>
-                    <div class="col-md-8 text-dark">
-                        <div class="card-body">
-                        <h5 id="cardTitle" class="card-title">${songs.type}</h5>
-                        <p class="card-title" id="introduction-title-card">${songs.title} </p>
-                        <p class="card-text text-sm text-gray-700">${songs.artist.name} . ${songs.data} . ${songs.nb_tracks} songs, ${songs.duration} mins</p>
-                        <div class="buttonContainerIntroduction mt-5">
-                        <button class="button-dark">
-                          <i class="ion-ios-play"></i>
-                            Play
-                          </button>
+                    <div class="col-md-8 text-white d-flex">
+                        <div class="card-body align-self-end">
+                        <h5 id="cardTitle" class="card-title fw-bold">${songs.type.toUpperCase()}</h5>
+                        <p class="card-title" id="introduction-title-card">${songs.title}</p>
+                        <p class="card-text text-sm text-gray-700">${songs.artist.name} . ${songs.release_date} . ${songs.nb_tracks} songs, ${songs.duration} mins</p>
                         
-                        <button class="button-light">Follow</button>
-                        
-                        <button class="button-light more">
-                          <i class="ion-ios-more"></i>
-                        </button>
-                        <i class="fas fa-ellipsis-h mx-2"></i>
-                        </div>
                         </div>
                     </div>
                     </div>
                 </div>
                 </div> 
             </div>`
-        
+
             let colSong = document.querySelector(".tracks");
 
             songs.tracks.data.forEach((el, i) => {
@@ -63,7 +51,7 @@ const getAlbum = function () {
               colSong.innerHTML += `
                       <div class="track">
     
-                        <div class="track__number">${i}</div>
+                        <div class="track__number">${i+1}</div>
     
                         <div class="track__added">
     
@@ -84,6 +72,7 @@ const getAlbum = function () {
                       </div>
                 `
             });
+          
     })
     .catch((err) => {
         console.log(err);
