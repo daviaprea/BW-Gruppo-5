@@ -230,7 +230,6 @@ body {
 }
 
 .centralPlaylistCard{
-    width: 22vh !important;
     padding: 0.5vh;
     background-color: #171717;
     color: white;
@@ -260,3 +259,52 @@ body {
     display: flex;
     flex-wrap: wrap;  
 }
+
+#smallNavbar{
+    overflow: hidden;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8183648459383753) 70%, rgba(0,0,0,0) 100%);
+}
+#smallNavbarLinks{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-around;
+    width: 100%;
+}
+#smallerContainer{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;    
+}
+
+.smallerNavLink{
+    color: rgb(122, 122, 122);
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 760px){
+    #player{
+    position: fixed;
+    width: 100%;
+    bottom: 80px;
+    background-color: #181818;
+    }
+    .buonaseraTitle {
+        font-weight: 700;
+        margin-bottom: 3rem;
+        margin-top: 4rem;
+        font-size: 2rem;
+    }
+}
+
+
