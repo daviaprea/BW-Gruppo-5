@@ -231,6 +231,13 @@ body a:hover {
     display: none;
   }
 }
+.controls {
+  width: 346px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
 button {
   border-radius: 20px;
   border: none;
