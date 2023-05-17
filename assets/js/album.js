@@ -53,13 +53,7 @@ const getAlbum = function () {
     
                         <div class="track__number">${i+1}</div>
     
-                        <div class="track__added">
-    
-                          <i class="ion-checkmark-round added"></i>
-    
-                        </div>
-    
-                        <div class="track__title">${el.title}</div>
+                        <div class="track__title fw-bold">${el.title}</div>
     
                         <div class="track__explicit">
     
@@ -72,7 +66,6 @@ const getAlbum = function () {
                       </div>
                 `
             });
-          
     })
     .catch((err) => {
         console.log(err);
