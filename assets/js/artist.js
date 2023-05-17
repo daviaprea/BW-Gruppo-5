@@ -32,7 +32,7 @@ fetch(endPoint + artist + '/' + 'top?limit=50')
         list.querySelector('img').src = artist.data[i].album.cover_small;
         list.querySelector('img').style.width = '30px'
         list.querySelector('h6').innerHTML = artist.data[i].title;
-
+        list.querySelector(".duration").innerHTML=artist.data[i].duration;
     })
 })
 .catch(err => {
