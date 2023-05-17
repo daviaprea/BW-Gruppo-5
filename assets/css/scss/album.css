@@ -165,7 +165,6 @@ body a:hover {
 }
 
 .track {
-  border-top: 1px solid rgb(40, 40, 40);
   height: 42px;
   display: flex;
   flex-flow: row wrap;
