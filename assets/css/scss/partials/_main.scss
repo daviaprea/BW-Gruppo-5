@@ -12,9 +12,13 @@ body {
     
 }
 
-#central-card{
-  background: linear-gradient(3deg, #121212 70%, #323232)
-}
+  #central-card{
+    background: none;
+      img {
+        box-shadow: black 55px 55px;
+      }
+  }
+
 
 .section-title {
     
@@ -24,6 +28,10 @@ body {
   font-size: $x-small * 1.2;
   margin-bottom: $margin-sm;
   
+}
+
+.linea {
+  color: $black;
 }
 
 .tracks {
@@ -72,7 +80,7 @@ body {
 }
 
 .track {
-    
+    border-top: 0px;
     & {
       height: 42px;
       display: flex;
@@ -198,9 +206,21 @@ body {
       color: $grey;
     }
     
+  } 
+
+  #introduction-title-card {
+    font-size: 4rem;
+    font-weight: bold;
   }
   
-
+    .col-md-3 {
+      flex: 0 0 auto;
+      width: 15%;
+    }
+    
+    .card-title {
+      font-size: small;
+    }
 
   @media (max-width: 1200px) {
     

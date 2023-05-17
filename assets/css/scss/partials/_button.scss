@@ -1,36 +1,37 @@
 button {
     border-radius: 20px;
     border: none;
-    padding: $padding-xs $padding;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: $x-small;
     outline: none;
     
     &:hover {
       cursor: pointer;
     }
   }
-  
+ 
   .button-dark {
     background: $green;
+    color: $black;
+    border: 20px solid $green;
+    border-radius: 100%;
+    
+    &:hover {
+      background: lighten( $green, 30% );
+    }
+  }
+  
+  .upperButtons{
+    background: rgb(66,57,24);
+    border-radius: 100%;
     color: $white;
-    border: 1px solid $green;
-    
-    &:hover {
-      background: lighten( $green, 10% );
-    }
-  }
-  
-  .button-light {
-    background: none;
-    color: $sand;
-    border: 1px solid $sand;
-    
-    &:hover {
-      border-color: $white;
-      color: $white;
-    }
-  }
-  
+    border: none;
+    width: 27px;
+    margin-inline: 5px
+}
+
+.buttoncontainer{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
   

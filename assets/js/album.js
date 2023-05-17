@@ -34,7 +34,7 @@ const getAlbum = function () {
                     <div class="col-md-8 text-white d-flex">
                         <div class="card-body align-self-end">
                         <h5 id="cardTitle" class="card-title fw-bold">${songs.type.toUpperCase()}</h5>
-                        <p class="card-title" id="introduction-title-card">${songs.title}</p>
+                        <p class="" id="introduction-title-card">${songs.title}</p>
                         <p class="card-text text-sm text-gray-700">${songs.artist.name} . ${songs.release_date} . ${songs.nb_tracks} songs, ${songs.duration} mins</p>
                         
                         </div>
