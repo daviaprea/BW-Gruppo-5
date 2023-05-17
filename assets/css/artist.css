@@ -207,25 +207,24 @@ body {
     color: #fff;
 }
 
-#popular-songs div {
+/*#popular-songs div {
     display: flex;
     align-items: center;
     padding: 5px 0;
     font-size: 14px;
-    width: 10px;
-}
+}*/
 
 #popular-songs p:first-child {
     margin: 0;
 }
 
-#popular-songs img {
+/*#popular-songs img {
     margin-left: 10px;
-}
+}*/
 
-#popular-songs h6{
+/*#popular-songs h6{
     margin: 0 20px;
-}
+}*/
 
 .streaming-number  {
     margin-bottom: 0;
