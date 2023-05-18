@@ -2,6 +2,8 @@ const striveUrl = "https://striveschool-api.herokuapp.com/api/deezer/album/";
 const key = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDYyM2M3ODc3NTgzYzAwMTRkMmNjYmMiLCJpYXQiOjE2ODQxNTk2MDksImV4cCI6MTY4NTM2OTIwOX0.RK6RE8424MDCQbvs8u0gvKiPo4MrR6-ww1HYYA6TexE";
 let urlParams = new URLSearchParams(window.location.search);
 let artistAlbum = urlParams.get("albumId");
+  
+
 
 const getAlbum = function () {
     fetch(striveUrl + artistAlbum, {
@@ -28,13 +30,13 @@ const getAlbum = function () {
                 <div class="col">
                 <div class="card mb-3 p-2 text-light bg-transparent border-0" id="central-card">
                     <div class="row g-0">
-                    <div class="col-md-3">
+                    <div class="col-md-3 col">
                         <img src="${songs.cover_medium}" class="img-fluid rounded-start shadow-lg" alt="Album cover">
                     </div>
                     <div class="col-md-8 text-white d-flex">
                         <div class="card-body align-self-end">
                         <h5 id="cardTitle" class="card-title fw-bold">${songs.type.toUpperCase()}</h5>
-                        <p class="" id="introduction-title-card">${songs.title}</p>
+                        <p class="" id="introduction-title-card">${songs.title}
                         <p class="card-text text-sm text-gray-700">${songs.artist.name} . ${songs.release_date} . ${songs.nb_tracks} songs, ${songs.duration} mins</p>
                         
                         </div>
@@ -44,6 +46,8 @@ const getAlbum = function () {
                 </div> 
             </div>`
 
+            
+
             let colSong = document.querySelector(".tracks");
 
             songs.tracks.data.forEach((el, i) => {
@@ -51,7 +55,7 @@ const getAlbum = function () {
               colSong.innerHTML += `
                       <div class="track">
     
-                        <div class="track__number">${i+1}</div>
+                        <div class="track__number">${i+1}<i id="playNumber" class="fas fa-play"></i></div>
                         
                         <div class="track__title fw-bold">${el.title}</div>
     
@@ -61,16 +65,14 @@ const getAlbum = function () {
     
                         </div>
                         <div class="controls">
-                            <div class="btn-success">
-                            <audio id="audio_${i}" src="${el.preview}" type="audio/mp3"></audio>
-                            <button onclick="playSong(${i}, '${songs.cover}', this)">Play</button> 
-                            </div>
-                            </div>
-                            <div class="track__plays">${Math.trunc(el.duration/60)}:${sec.slice(0,2)}</div>
-                        
-                      </div>
-                `
-                
+                        <div class="track__plays">${Math.trunc(el.duration/60)}:${sec.slice(0,2)}</div>
+                          
+                      
+                      `
+                //  <div class="btn-success">
+                //             <audio id="audio_${i}" src="${el.preview}" type="audio/mp3"></audio>
+                //             <button onclick="playSong(${i}, '${songs.cover}', this)">Play</button> 
+                //             </div>
                 const playPauseButton = document.getElementById("play-pause-button");
                 const restartButton = document.getElementById("restart-button");
                 const audio = new Audio(`${el.preview}`);
@@ -114,8 +116,87 @@ const getAlbum = function () {
                     return `${minutes}:${seconds.toString().padStart(2, "0")}`;
                 }
             });
-            
-    })
+        
+            const draw = function (img) {
+                let canvas = document.createElement('canvas')
+                let c = canvas.getContext('2d')
+                c.width = canvas.width = img.clientWidth
+                c.height = canvas.height = img.clientHeight
+                c.clearRect(0, 0, c.width, c.height)
+                c.drawImage(img, 0, 0, img.clientWidth, img.clientHeight)
+                return c
+              }
+              
+              // scompone pixel per pixel e ritorna un oggetto con una mappa della loro frequenza nell'immagine
+              const getColors = function (c) {
+                let col,
+                  colors = {}
+                let pixels, r, g, b, a
+                r = g = b = a = 0
+                pixels = c.getImageData(0, 0, c.width, c.height)
+                for (let i = 0, data = pixels.data; i < data.length; i += 4) {
+                  r = data[i]
+                  g = data[i + 1]
+                  b = data[i + 2]
+                  a = data[i + 3]
+                  if (a < 255 / 2) continue
+                  col = rgbToHex(r, g, b)
+                  if (!colors[col]) colors[col] = 0
+                  colors[col]++
+                }
+                return colors
+              }
+              
+              // trova il colore più ricorrente data una mappa di frequenza dei colori
+              const findMostRecurrentColor = function (colorMap) {
+                let highestValue = 0
+                let mostRecurrent = null
+                for (const hexColor in colorMap) {
+                  if (colorMap[hexColor] > highestValue) {
+                    mostRecurrent = hexColor
+                    highestValue = colorMap[hexColor]
+                  }
+                }
+                return mostRecurrent
+              }
+              
+              // converte un valore in rgb a un valore esadecimale
+              const rgbToHex = function (r, g, b) {
+                if (r > 255 || g > 255 || b > 255) {
+                  throw 'Invalid color component'
+                } else {
+                  return ((r << 16) | (g << 8) | b).toString(16)
+                }
+              }
+              
+              // inserisce degli '0' se necessario davanti al colore in esadecimale per renderlo di 6 caratteri
+              const pad = function (hex) {
+                return ('000000' + hex).slice(-6)
+              }
+              
+              window.onload = function (albumCoverPath) {
+                // prendo il riferimento all'immagine del dom
+                let imgReference = new Image();
+                    imgReference.src = albumCoverPath;
+              
+                // creo il context 2d dell'immagine selezionata
+                let context = draw(imgReference)
+              
+                // creo la mappa dei colori più ricorrenti nell'immagine
+                let allColors = getColors(context)
+              
+                // trovo colore più ricorrente in esadecimale
+                let mostRecurrent = findMostRecurrentColor(allColors)
+              
+                // se necessario, aggiunge degli '0' per rendere il risultato un valido colore esadecimale
+                let mostRecurrentHex = pad(mostRecurrent)
+              
+                // console.log del risultato
+                console.log(mostRecurrentHex)
+              }
+              window.onload(`${songs.cover}`);
+
+        })
     .catch((err) => {
       console.log(err);
     })
@@ -124,13 +205,4 @@ const getAlbum = function () {
 
 getAlbum();
 
-
-// function playSong(index) {
-            //     const audio = document.getElementById(`audio_${index}`);
-            //     if (audio.paused) {
-            //         audio.play();
-            //     } else {
-            //         audio.pause();
-            //     }
-            // }
           

@@ -267,5 +267,17 @@ body {
   align-items: center;
 }
 
-@media (max-width: $breakpoint-small) {
+@media screen and (max-width: 768px) {
+  #central-card{
+    background: none;
+      img {
+        width: 100vh;
+        box-shadow: black 55px 55px;
+      }
+  }
+
+  #introduction-title-card {
+    font-size: 4rem;
+    font-weight: bold;
+}
 }
