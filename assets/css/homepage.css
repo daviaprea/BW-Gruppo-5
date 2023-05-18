@@ -149,6 +149,11 @@ body {
     margin-right: 1.5rem
 }
 
+.card-link{
+    color: white;
+    text-decoration: none;
+}
+
 .upperButtons{
     background: black;
     border-radius: 100%;
@@ -355,7 +360,7 @@ body {
     width: 40px;
     height: 40px;
     position: absolute;
-    top: 1rem;
+    top: 2.2rem;
     right: 0.3rem;
     display: none;
 }
