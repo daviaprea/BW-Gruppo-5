@@ -61,7 +61,7 @@ const getAlbum = function () {
     
                         </div>
                         <div class="controls">
-                            <div>
+                            <div class="btn-success">
                             <audio id="audio_${i}" src="${el.preview}" type="audio/mp3"></audio>
                             <button onclick="playSong(${i}, '${songs.cover}', this)">Play</button> 
                             </div>
