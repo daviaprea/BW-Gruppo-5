@@ -234,6 +234,7 @@ body {
 
 .artist-song-content:hover i {
     display: block;
+    font-size: 12px;
 }
 
 .streaming-number  {
@@ -372,11 +373,5 @@ body {
     .artist-song-content h6 {
         font-size: 16px;
         font-weight: normal;
-    }
-    #main-col {
-        height: 100vh;
-    }
-    #smallNavbar {
-        display: block;
     }
 }
