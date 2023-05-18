@@ -1,8 +1,3 @@
-p.card-title{
-  font-size: 4rem;
-  font-weight: bold;
-}
-
 #right-aside {
   color: #b1b0b0;
 }
@@ -11,58 +6,6 @@ p.card-title{
   border-radius: 100% !important;
   width: 40px;
   height: 40px;
-}
-
-
-
-#left-screen{
-  color: #b1b0b0;
-  padding-left: 2vh;
-  
-}
-
-#fixer{
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  overflow: hidden;
-}
-
-#fixerRight{
-  position: sticky;
-  top: 0;
-}
-
-.nav{
-  margin-top: 2vh;
-  color: rgb(122, 122, 122) !important;
-}
-
-.navButtons{
-  color: #b1b0b0 !important;
-}
-
-#firstNav i {
-  font-size: 1.4rem;
-}
-#iconaStronza{
-  font-size: 1.8rem;
-}
-
-.my-2{
-  margin-bottom: 0.8rem !important;
-}
-#coloredHeart{
-  background: linear-gradient(315deg, rgba(184,178,194,1) 22%, rgba(114,36,204,1) 84%);
-  padding: 0.28rem;
-  border-radius: 3px;
-}
-#coloredBookmark{
-  background-color: #0e5326;
-  padding: 0.3rem 0.45rem;
-  color: #6bb100;
-  font-size: 0.9rem;
-  border-radius: 3px;
 }
 
 .iconsImgAside {
@@ -114,7 +57,7 @@ p.card-title{
 }
 
 body {
-  background: linear-gradient(#c8ac47, #1c1d25);
+  background: linear-gradient(6deg, #1c1d25 50%, #c8ac47);
   font-family: "Roboto", sans-serif;
 }
 body a {
@@ -124,12 +67,23 @@ body a:hover {
   color: rgb(200, 200, 200);
 }
 
+#central-card {
+  background: none;
+}
+#central-card img {
+  box-shadow: black 55px 55px;
+}
+
 .section-title {
   text-transform: uppercase;
   color: rgb(170, 170, 170);
   letter-spacing: 1.25px;
   font-size: 13.2px;
   margin-bottom: 10px;
+}
+
+.linea {
+  color: rgb(24, 24, 24);
 }
 
 .tracks {
@@ -165,6 +119,12 @@ body a:hover {
 }
 
 .track {
+<<<<<<< HEAD
+  border-top: 0px;
+}
+.track {
+=======
+>>>>>>> origin/Branch-Gerald
   height: 42px;
   display: flex;
   flex-flow: row wrap;
@@ -243,6 +203,20 @@ body a:hover {
   color: rgb(170, 170, 170);
 }
 
+#introduction-title-card {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.col-md-3 {
+  flex: 0 0 auto;
+  width: 15%;
+}
+
+.card-title {
+  font-size: small;
+}
+
 @media (max-width: 1200px) {
   .tracks__heading__title {
     width: auto;
@@ -260,13 +234,18 @@ body a:hover {
     display: none;
   }
 }
+.controls {
+  width: 346px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
 button {
   border-radius: 20px;
   border: none;
-  padding: 5px 15px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 11px;
   outline: none;
 }
 button:hover {
@@ -275,19 +254,24 @@ button:hover {
 
 .button-dark {
   background: rgb(30, 215, 96);
-  color: rgb(255, 255, 255);
-  border: 1px solid rgb(30, 215, 96);
+  color: rgb(24, 24, 24);
+  border: 20px solid rgb(30, 215, 96);
+  border-radius: 100%;
 }
 .button-dark:hover {
-  background: #43e57d;
+  background: #9df1bb;
 }
 
-.button-light {
-  background: none;
-  color: rgb(200, 200, 200);
-  border: 1px solid rgb(200, 200, 200);
-}
-.button-light:hover {
-  border-color: rgb(255, 255, 255);
+.upperButtons {
+  background: rgb(66, 57, 24);
+  border-radius: 100%;
   color: rgb(255, 255, 255);
+  border: none;
+  width: 27px;
+  margin-inline: 5px;
+}
+
+.buttoncontainer {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
 }/*# sourceMappingURL=album.css.map */

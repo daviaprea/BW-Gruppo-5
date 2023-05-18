@@ -169,10 +169,17 @@ body {
     background-color: #3cd75f;
     border: none;
     border-radius: 100%;
+    width: 40px;
+    height: 40px;
+}
+
+#play-button:hover {
+    width: 41px;
+    height: 41px;
 }
 
 #play-button i {
-    padding: 12px 10px;
+    padding: 10px;
 }
 
 #following-button {
@@ -186,31 +193,42 @@ body {
     margin-left: 20px;
 }
 
+#following-button:hover {
+    border: 2px solid #fff;
+}
+
 #dots {
     margin-left: 20px;
     color: rgb(142, 140, 140);
     cursor: pointer;
 }
 
-#popular-songs div {
+#dots:hover {
+    color: #fff;
+}
+
+/*#popular-songs div {
     display: flex;
     align-items: center;
     padding: 5px 0;
     font-size: 14px;
-    width: 10px;
-}
+}*/
 
 #popular-songs p:first-child {
     margin: 0;
 }
 
-#popular-songs img {
-    margin-left: 10px;
+.artist-song-content{
+    width: 50%;
 }
 
-#popular-songs h6{
+/*#popular-songs img {
+    margin-left: 10px;
+}*/
+
+/*#popular-songs h6{
     margin: 0 20px;
-}
+}*/
 
 .streaming-number  {
     margin-bottom: 0;

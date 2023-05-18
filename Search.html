@@ -36,23 +36,26 @@
           
 
             <div class="col-12 col-sm-10">
-              <div class="row">
-                <div class="col-1">
-                  <div class="col buttoncontainer"><button class="upperButtons"><i class="fas fa-chevron-left"></i></button> <button class="upperButtons"><i class="fas fa-chevron-right"></i></button></div>
-                  </div>
-                  <div class="col-2">
-                    <form class="d-flex" role="search">
-                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    </form>
-                  </div>
-                
+              <div class="position-relative">
+                <input type="text" id="search" placeholder="Cosa vuoi ascoltare?">
+                <i class="fas fa-search text-white-50 search-icon"></i>
               </div>
+
+              <div class="row" id="search-result">
+                <div class="col-4 artist-side-search d-flex flex-column justify-content-around">
+                  
+                </div>
+                <div class="col-8 song-side-search">
+
+                </div>
+              </div>
+
               <div id="title-page">
               <h3 class="text-white mt-5 mb-3 ">Sfoglia tutto</h3>
               </div>
-              <div class="row justify-content-lg-between d-flex felx-wrap mx-1">
+              <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6 g-3">
 
-                <div class="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1">
+                <div class="col">
                   <div class="card color-1">
                     <div class="card-body">
                       <h5 class="card-title">Podcats</h5>
@@ -61,7 +64,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-2" id="card-2">
                     <div class="card-body">
                       <h5 class="card-title">Made For You</h5>
@@ -70,7 +73,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-3">
                     <div class="card-body">
                       <h5 class="card-title">Charts</h5>
@@ -79,7 +82,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-4">
                     <div class="card-body">
                       <h5 class="card-title">New Releases</h5>
@@ -88,7 +91,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-5">
                     <div class="card-body">
                       <h5 class="card-title">Discover</h5>
@@ -97,7 +100,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-6">
                     <div class="card-body">
                       <h5 class="card-title">Live Events</h5>
@@ -106,7 +109,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1">
+                <div class="col">
                   <div class="card color-7">
                     <div class="card-body">
                       <h5 class="card-title">Summer</h5>
@@ -115,7 +118,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card">
                     <div class="card-body">
                       <h5 class="card-title">Pop</h5>
@@ -124,7 +127,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-3">
                     <div class="card-body">
                       <h5 class="card-title">Hip-Hop</h5>
@@ -133,7 +136,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-5">
                     <div class="card-body">
                       <h5 class="card-title">Mood</h5>
@@ -142,7 +145,7 @@
                   </div>
                 </div> 
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-4">
                     <div class="card-body">
                       <h5 class="card-title">Gaming</h5>
@@ -151,7 +154,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-1" >
                     <div class="card-body">
                       <h5 class="card-title">Indie</h5>
@@ -160,7 +163,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-4">
                     <div class="card-body">
                       <h5 class="card-title">Dance/Electronic</h5>
@@ -169,7 +172,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-5">
                     <div class="card-body">
                       <h5 class="card-title">Latino</h5>
@@ -178,7 +181,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-7">
                     <div class="card-body">
                       <h5 class="card-title">Songwriters</h5>
@@ -187,7 +190,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-4">
                     <div class="card-body">
                       <h5 class="card-title">R&amp;B </h5>
@@ -196,7 +199,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-6">
                     <div class="card-body">
                       <h5 class="card-title">EQUAL</h5>
@@ -205,7 +208,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-3">
                     <div class="card-body">
                       <h5 class="card-title">Rock</h5>
@@ -214,7 +217,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-5">
                     <div class="card-body">
                       <h5 class="card-title">Workout</h5>
@@ -223,7 +226,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-5">
                     <div class="card-body">
                       <h5 class="card-title">RADAR</h5>
@@ -232,7 +235,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-1">
                     <div class="card-body">
                       <h5 class="card-title">Chill</h5>
@@ -241,7 +244,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-2">
                     <div class="card-body">
                       <h5 class="card-title">In the car</h5>
@@ -250,7 +253,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-4">
                     <div class="card-body">
                       <h5 class="card-title">Decades</h5>
@@ -259,7 +262,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-7">
                     <div class="card-body">
                       <h5 class="card-title">Pride</h5>
@@ -268,7 +271,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-1" >
                     <div class="card-body">
                       <h5 class="card-title">Kids&amp;Family</h5>
@@ -277,7 +280,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-3">
                     <div class="card-body">
                       <h5 class="card-title">Wellness</h5>
@@ -286,7 +289,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-2">
                     <div class="card-body">
                       <h5 class="card-title">Soul</h5>
@@ -295,7 +298,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-4">
                     <div class="card-body">
                       <h5 class="card-title">Alternative</h5>
@@ -304,7 +307,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-6">
                     <div class="card-body">
                       <h5 class="card-title">At Home</h5>
@@ -313,7 +316,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-3">
                     <div class="card-body">
                       <h5 class="card-title">Sleep</h5>
@@ -322,7 +325,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-1">
                     <div class="card-body">
                       <h5 class="card-title">Caribbean</h5>
@@ -331,7 +334,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-5">
                     <div class="card-body">
                       <h5 class="card-title">Jazz</h5>
@@ -340,7 +343,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-2">
                     <div class="card-body">
                       <h5 class="card-title">Sanremo 2022</h5>
@@ -349,7 +352,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-1">
                     <div class="card-body">
                       <h5 class="card-title">Folk&amp;Acoustic</h5>
@@ -358,7 +361,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-7">
                     <div class="card-body">
                       <h5 class="card-title">Focus</h5>
@@ -367,7 +370,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-3">
                     <div class="card-body">
                       <h5 class="card-title">Instrumental</h5>
@@ -376,7 +379,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-2">
                     <div class="card-body">
                       <h5 class="card-title">Party</h5>
@@ -385,7 +388,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-4">
                     <div class="card-body">
                       <h5 class="card-title">League of Legends</h5>
@@ -394,7 +397,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-5">
                     <div class="card-body">
                       <h5 class="card-title">Metal</h5>
@@ -403,7 +406,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-1">
                     <div class="card-body">
                       <h5 class="card-title">Tastemakers</h5>
@@ -412,7 +415,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-5">
                     <div class="card-body">
                       <h5 class="card-title">Funk</h5>
@@ -421,7 +424,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-2">
                     <div class="card-body">
                       <h5 class="card-title">Punk</h5>
@@ -430,7 +433,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-1">
                     <div class="card-body">
                       <h5 class="card-title">Ambient</h5>
@@ -439,7 +442,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-6">
                     <div class="card-body">
                       <h5 class="card-title">K-Pop</h5>
@@ -448,7 +451,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-3">
                     <div class="card-body">
                       <h5 class="card-title">Blues</h5>
@@ -457,7 +460,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-2">
                     <div class="card-body">
                       <h5 class="card-title">Country</h5>
@@ -466,7 +469,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-1" >
                     <div class="card-body">
                       <h5 class="card-title">Frequency</h5>
@@ -475,7 +478,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-4">
                     <div class="card-body">
                       <h5 class="card-title">Arab</h5>
@@ -484,7 +487,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-7">
                     <div class="card-body">
                       <h5 class="card-title">Afro Hits</h5>
@@ -493,7 +496,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-3">
                     <div class="card-body">
                       <h5 class="card-title">Travel</h5>
@@ -502,7 +505,7 @@
                   </div>
                 </div>
 
-                <div class="col-6 col-md-3 col-lg-3 col-xl-2 col-xxl-1 my-1 ">
+                <div class="col">
                   <div class="card color-1">
                     <div class="card-body">
                       <h5 class="card-title">Classical Essentials</h5>
