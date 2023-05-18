@@ -601,7 +601,7 @@
           <div class="player-middle d-flex justify-content-center gap-2">
               <button><i class="fas fa-random green-btn"></i></button>
               <button><i class="fas fa-step-backward text-white-50"></i></button>
-              <button><i class="fas fa-play-circle text-white fs-2"></i></button>
+              <button><i class="fas fa-play-circle fa-pause-circle text-white fs-2"></i></button>
               <button><i class="fas fa-step-forward text-white-50"></i></button>
               <button><i class="fas fa-undo green-btn"></i></button>
           </div>
@@ -630,10 +630,28 @@
 
   <script>
       let slider=document.querySelector(".range");
-      slider.addEventListener("input", ()=>{
+          slider.addEventListener("input", ()=>{
           progressBar=document.querySelector(".slider progress");
           progressBar.value=slider.value;
-      })
+        })
+              
+      let isPlaying = false; 
+      let playButton = document.querySelector('.fa-play-circle');
+      let audioPlayer = document.querySelector('#audioPlayer');
+
+      playButton.addEventListener("click", () => {
+          if (isPlaying) {            
+            audioPlayer.pause();
+            playButton.classList.remove('fa-pause-circle');
+            playButton.classList.add('fa-play-circle');
+          } else {           
+            audioPlayer.play();
+            playButton.classList.remove('fa-play-circle');
+            playButton.classList.add('fa-pause-circle');
+          }
+          isPlaying = !isPlaying; 
+        });
+
   </script>
 
 

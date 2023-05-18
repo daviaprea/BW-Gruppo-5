@@ -39,7 +39,6 @@ fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=queen", {
               const audioPlayer = document.querySelector('#audioPlayer');
               audioPlayer.src = firstSong.preview;
               console.log(firstSong.preview);
-              
               audioPlayer.addEventListener('canplay', function() {
                 audioPlayer.play();
               });
