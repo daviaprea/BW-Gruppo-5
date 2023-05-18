@@ -133,17 +133,35 @@ body {
     background: rgb(80, 80, 80);
 }
 
-
+.rightAsideCard{
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
 
 /*Parte centrale */
+
+#right-aside-title > div > i.fas.fa-times{
+    margin-left: 1rem;
+}
+
+.titoletto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 .fa-cog{
-    margin-right: 1.5rem
+    margin-right: 1.5rem;
+    font-size: 1.5rem;
 }
 .fa-bell{
-    margin-right: 1.5rem
+    margin-right: 1.5rem;
+     font-size: 1.5rem;
 }
 .fa-clock{
-    margin-right: 1.5rem
+    margin-right: 1.5rem;
+    font-size : 1.5rem;
 }
 
 .upperButtons{
@@ -294,6 +312,10 @@ body {
 .cardP{
     color: gray;
 }
+.card-link{
+    text-decoration: none !important;
+    color: white;
+}
 
 /*RESPONSIVE*/
 
@@ -368,7 +390,7 @@ body {
 .smallerNavLink:hover {
     color: rgb(255, 255, 255);
     font-size: 1.2rem;
-  }
+}
 
 .smallerNavLink:active {
     color: rgb(255, 255, 255);
@@ -395,4 +417,23 @@ body {
     }
 }
 
-
+@media only screen and (min-width: 760px) and (max-width: 900px){
+    #introduction-title-card{
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (min-width: 901px) and (max-width: 1080px){
+    #introduction-title-card{
+        font-size: 2.5rem;
+    }
+}
+@media screen and (min-width: 1081px) and (max-width: 1380px){
+    #introduction-title-card{
+        font-size: 3rem;
+    }
+}
+@media screen and (min-width: 1381px) and (max-width: 1680px){
+    #introduction-title-card{
+        font-size: 3.5rem;
+    }
+}
