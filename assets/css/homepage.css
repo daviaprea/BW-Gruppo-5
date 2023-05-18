@@ -312,6 +312,10 @@ body {
 .cardP{
     color: gray;
 }
+.card-link{
+    text-decoration: none !important;
+    color: white;
+}
 
 /*RESPONSIVE*/
 
