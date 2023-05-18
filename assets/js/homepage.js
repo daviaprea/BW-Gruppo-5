@@ -26,7 +26,6 @@ fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=queen",{
     console.log(err)
 })
 
-<<<<<<< HEAD
 
 let playButtons = document.querySelectorAll('.powerPlayer');
 
@@ -55,18 +54,10 @@ playButtons.forEach((playButton) => {
     });
 });
 
-
-
-
-
-
-
-
-=======
 let date = new Date();
 let hours = date.getHours();
 console.log(hours);
-let title = document.getElementById('buonaseraTitle');
+let title = document.getElementById('buonaseraTitlePrincipale');
 
 if(hours < 12) {
 }else if(hours >= 12) {
@@ -74,4 +65,3 @@ if(hours < 12) {
 }else if(hours >= 18) {
     title.innerHTML = 'Buonasera';
 }
->>>>>>> origin/Gabriele-Branch
