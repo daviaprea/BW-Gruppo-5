@@ -50,6 +50,7 @@ playButtons.forEach((playButton) => {
                 console.log(firstSong.preview);
                 audioPlayer.play();
             }
+            
         })
         .catch(err => {
             console.log(err);
