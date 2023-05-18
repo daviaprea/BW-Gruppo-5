@@ -218,7 +218,15 @@ body a:hover {
 }
 
 
-@media (max-width: 1200px) {
+@media (min-width: 769px) and (max-width:1879px){
+  #puntiOr{
+    display: none;
+  }
+
+  .track__plays {
+    display: none;
+  }
+  
   .tracks__heading__title {
     width: auto;
   }
@@ -235,6 +243,7 @@ body a:hover {
     display: none;
   }
 }
+
 .controls {
   width: 346px;
   display: flex;
@@ -286,6 +295,10 @@ button:hover {
 }
 
 @media screen and (max-width: 768px) {
+  
+  
+
+
   #left-screen {
     display: none;
   }

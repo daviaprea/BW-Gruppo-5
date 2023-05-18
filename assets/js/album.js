@@ -55,8 +55,11 @@ const getAlbum = function () {
               colSong.innerHTML += `
                       <div class="track">
     
-                        <div class="track__number">${i+1}<i id="playNumber" class="fas fa-play"></i></div>
-                        
+                        <div class="track__number">${i+1}</div>
+                          <div class="btnDiv">
+                            <audio id="audio_${i}" src="${el.preview}" type="audio/mp3"></audio>
+                            <button id="btnTrack" class="btn text-secondary" onclick="playSong(${i}, '${songs.cover}', this)">Play</button> 
+                          </div>
                         <div class="track__title fw-bold">${el.title}</div>
     
                         <div class="track__explicit">
@@ -69,10 +72,7 @@ const getAlbum = function () {
                           
                       
                       `
-                //  <div class="btn-success">
-                //             <audio id="audio_${i}" src="${el.preview}" type="audio/mp3"></audio>
-                //             <button onclick="playSong(${i}, '${songs.cover}', this)">Play</button> 
-                //             </div>
+                //  
                 const playPauseButton = document.getElementById("play-pause-button");
                 const restartButton = document.getElementById("restart-button");
                 const audio = new Audio(`${el.preview}`);
