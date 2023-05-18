@@ -133,7 +133,11 @@ body {
     background: rgb(80, 80, 80);
 }
 
-
+.rightAsideCard{
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
 
 /*Parte centrale */
 .fa-cog{
