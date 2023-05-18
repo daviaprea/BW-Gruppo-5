@@ -634,24 +634,23 @@
           progressBar=document.querySelector(".slider progress");
           progressBar.value=slider.value;
       })
-      let isPlaying = false; // Variabile di stato per tenere traccia della riproduzione
+      
+      let isPlaying = false;
 
       let playButton = document.querySelector('.fa-play-circle');
       let audioPlayer = document.querySelector('#audioPlayer');
 
       playButton.addEventListener("click", () => {
         if (isPlaying) {
-          // Se è in riproduzione, metti in pausa
           audioPlayer.pause();
           playButton.classList.remove('fa-pause-circle');
           playButton.classList.add('fa-play-circle');
         } else {
-          // Se è in pausa, riproduci
           audioPlayer.play();
           playButton.classList.remove('fa-play-circle');
           playButton.classList.add('fa-pause-circle');
         }
-        isPlaying = !isPlaying; // Inverti lo stato della riproduzione
+        isPlaying = !isPlaying;
       });
   </script>
 

@@ -364,10 +364,14 @@ body {
     right: 0.3rem;
     display: none;
 }
+.fa-times{
+    margin-left: 1rem; 
+}
 
 #play-button i {
     padding: 10px;
 }
+
 .card:hover #play-button {
     display: block;
 }
