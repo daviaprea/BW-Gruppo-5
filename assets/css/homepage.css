@@ -140,14 +140,24 @@ body {
 }
 
 /*Parte centrale */
+
+.titoletto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 .fa-cog{
-    margin-right: 1.5rem
+    margin-right: 1.5rem;
+    font-size: 1.5rem;
 }
 .fa-bell{
-    margin-right: 1.5rem
+    margin-right: 1.5rem;
+     font-size: 1.5rem;
 }
 .fa-clock{
-    margin-right: 1.5rem
+    margin-right: 1.5rem;
+    font-size : 1.5rem;
 }
 
 .upperButtons{
