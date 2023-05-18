@@ -63,24 +63,58 @@ const getAlbum = function () {
                         <div class="controls">
                             <div>
                             <audio id="audio_${i}" src="${el.preview}" type="audio/mp3"></audio>
-                            <button onclick="playSong(${i})">Play</button> 
+                            <button onclick="playSong(${i}, '${songs.cover}', this)">Play</button> 
                             </div>
                             </div>
                             <div class="track__plays">${Math.trunc(el.duration/60)}:${sec.slice(0,2)}</div>
                         
                       </div>
                 `
-            
-            });
-            function playSong(index) {
-                const audio = document.getElementById(`audio_${index}`);
-                if (audio.paused) {
-                    audio.play();
-                } else {
-                    audio.pause();
+                
+                const playPauseButton = document.getElementById("play-pause-button");
+                const restartButton = document.getElementById("restart-button");
+                const audio = new Audio(`${el.preview}`);
+        
+                let playAcceso = false;
+        
+                playPauseButton.addEventListener("click", function () {
+                    if (playAcceso) {
+                        audio.pause();
+                        playPauseButton.innerHTML = '<i class="fas fa-play-circle text-white fs-2"></i>';
+                    } else {
+                        audio.play();
+                        playPauseButton.innerHTML = '<i class="fas fa-pause-circle text-white fs-2"></i>';
+                    }
+                    playAcceso = !playAcceso;
+                });
+        
+                restartButton.addEventListener("click", function () {
+                    audio.currentTime = 0;
+                    if (!playAcceso) {
+                        audio.play();
+                        playPauseButton.innerHTML = '<i class="fas fa-pause-circle text-white fs-2"></i>';
+                        playAcceso = true;
+                    }
+                });
+        
+                audio.addEventListener("timeupdate", function () {
+                    const progress = (audio.currentTime / audio.duration) * 100;
+                    const currentTime = formatTime(audio.currentTime);
+                    const duration = formatTime(audio.duration);
+        
+                    document.getElementById("seek-slider").value = progress;
+                    document.getElementById("progress-bar").value = progress;
+                    document.getElementById("current-time").textContent = currentTime;
+                    document.getElementById("duration").textContent = duration;
+                });
+        
+                function formatTime(timeInSeconds) {
+                    const minutes = Math.floor(timeInSeconds / 60);
+                    const seconds = Math.floor(timeInSeconds % 60);
+                    return `${minutes}:${seconds.toString().padStart(2, "0")}`;
                 }
-            }
-          
+            });
+            
     })
     .catch((err) => {
       console.log(err);
@@ -91,3 +125,12 @@ const getAlbum = function () {
 getAlbum();
 
 
+// function playSong(index) {
+            //     const audio = document.getElementById(`audio_${index}`);
+            //     if (audio.paused) {
+            //         audio.play();
+            //     } else {
+            //         audio.pause();
+            //     }
+            // }
+          
