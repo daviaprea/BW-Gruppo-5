@@ -45,7 +45,7 @@ playButtons.forEach((playButton) => {
             if (fetchObj.data && fetchObj.data.length > 0) {
                 const firstSong = fetchObj.data[0];
                 console.log(firstSong);
-                const audioPlayer = document.querySelector('#player');
+                const audioPlayer = document.querySelector('#audioPlayer');
                 audioPlayer.src = firstSong.preview;
                 console.log(firstSong.preview);
                 audioPlayer.play();
