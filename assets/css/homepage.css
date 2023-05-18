@@ -141,6 +141,10 @@ body {
 
 /*Parte centrale */
 
+#right-aside-title > div > i.fas.fa-times{
+    margin-left: 1rem;
+}
+
 .titoletto{
     display: flex;
     flex-direction: row;
@@ -382,7 +386,7 @@ body {
 .smallerNavLink:hover {
     color: rgb(255, 255, 255);
     font-size: 1.2rem;
-  }
+}
 
 .smallerNavLink:active {
     color: rgb(255, 255, 255);
