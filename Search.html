@@ -12,9 +12,9 @@
  </head>
   <body>
     
-    <div class="container-fuild">
-      <div class="row g-0">
-        <div class="col-2 bg-black text-white-50">
+    <div class="container-fluid text-light">
+      <div class="row">
+        <div class="col-2 bg-black" id="left-screen">
           <div id="fixer"> 
 
             <i class="fas fa-ellipsis-h mx-3 mt-3"></i>
@@ -26,7 +26,7 @@
   
               <div class="nav" id="firstNav">
                <ul class="list-unstyled">
-                  <li class="my-2"><a href="#" class="text-decoration-none navButtons"><i class="fas fa-home-lg-alt mx-3"></i>Home</a></li>
+                  <li class="my-2"><a href="./Homepage.html" class="text-decoration-none navButtons"><i class="fas fa-home-lg-alt mx-3"></i>Home</a></li>
                   <li class="my-2"><a href="#" class="text-decoration-none navButtons"><i class="fas fa-search mx-3"></i>Cerca</a></li>
                   <li class="my-2"><a href="#" class="text-decoration-none navButtons"><i class="fas fa-book mx-3"></i>la tua libreria</a></li>
                </ul>
@@ -81,28 +81,26 @@
         </div>
           
             <!-- Sezione centrale -->
-            <div class="col-8 bg-dark"> 
-              <div class="position-relative">
+            <div class="col-8 p-2 bg-dark"> 
+              <div class="position-relative mb-3">
                 <input type="text" id="search" placeholder="Cosa vuoi ascoltare?">
                 <i class="fas fa-search text-white-50 search-icon"></i>
               </div>
 
-              <div class="row m-0" id="search-result">
-                <div class="col-4 ">
-                  <div class="artist-side-search d-flex flex-column justify-content-around h-100">
-
-                  </div>
+              <div class="row m-0 mb-3" id="search-result">
+                <div class="col-4 g-0">
+                  
                 </div>
                 <div class="col-8 song-side-search">
 
                 </div>
               </div>
 
-              <div id="title-page">
-              <h3 class="text-white mt-5 mb-3 ">Sfoglia tutto</h3>
+              <div class="row w-100 g-0" id="title-page">
+                <div class="col"><h3 class="text-white m-0">Sfoglia tutto</h3></div>
               </div>
 
-              <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xl-6 row-cols-xxl-7 m-0 g-3 justify-content-center">
+              <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xl-6 row-cols-xxl-7 m-0 g-3 justify-content-center central-playlist-list">
 
                 <div class="col">
                   <div class="card color-1">
@@ -564,7 +562,7 @@
                 </div>
               </div>
             </div>
-            <div class="bg-black col-2 d-none d-md-block" id="right-screen">
+            <div class="bg-black col-2 " id="right-screen">
 
               <div id="fixerRight"> 
               
@@ -585,7 +583,7 @@
                         <p class="card-text fw-bold righterColText">Davide Aprea</p>  <p class="righterP">4ore</p>
                         </div>
                         <p class="card-text righterColText">Ascoltando music!</p>
-                        <p class="card-text righterColText">@EP Amico</p>
+                        <p class="card-text">@EP Amico</p>
                       </div>
                     </div>
                   </div>
@@ -604,7 +602,7 @@
                         <p class="card-text fw-bold righterColText">Gabriele Farci</p> <p class="righterP">4ore</p>
                         </div>
                         <p class="card-text righterColText">Facendo cose..!</p>
-                        <p class="card-text righterColText">@ Amico</p>
+                        <p class="card-text">@ Amico</p>
                       </div>
                     </div>
                   </div>
@@ -623,7 +621,7 @@
                         <p class="card-text fw-bold righterColText">Manuel Altruda</p> <p class="righterP">4ore</p>
                         </div>
                         <p class="card-text righterColText">Chilling!</p>
-                        <p class="card-text righterColText"><i class="fas fa-volume-up"></i> Friend</p>
+                        <p class="card-text"><i class="fas fa-volume-up"></i> Friend</p>
                       </div>
                     </div>
                   </div>
