@@ -34,6 +34,14 @@
     border: none;
     overflow: hidden;
 }
+.righterColText{
+    margin-bottom : 0px;
+    color: rgb(122, 122, 122);
+    font-size: 0.75rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis !important;
+}
 
 
 
