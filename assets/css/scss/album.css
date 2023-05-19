@@ -297,11 +297,6 @@ button:hover {
   display: none;
 }
 
-@media screen and (max-width: 968px) {
-  #player {
-    display: none !important;
-  }
-}
 
 @media screen and (max-width: 768px) {
   
