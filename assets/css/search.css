@@ -1,3 +1,4 @@
+
 #search{
     border-radius: 20px;
     border: 0;
@@ -34,13 +35,13 @@
     border: none;
     overflow: hidden;
 }
-
-@media only screen and (max-width: 1168px){
-    #right-screen {
-        display: none;
-    }
-
-    
+.righterColText{
+    margin-bottom : 0px;
+    color: rgb(122, 122, 122);
+    font-size: 0.75rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis !important;
 }
 
 
