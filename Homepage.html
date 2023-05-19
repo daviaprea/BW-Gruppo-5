@@ -17,7 +17,6 @@
     <div class="container-fluid text-light">
       <div class="row">
 
-
         <!--LEFT SCREEN-->
 
 
@@ -35,8 +34,8 @@
 
             <div class="nav" id="firstNav">
              <ul class="list-unstyled">
-                <li class="my-2"><a href="#" class="text-decoration-none navButtons"><i class="fas fa-home-lg-alt mx-3"></i>Home</a></li>
-                <li class="my-2"><a href="#" class="text-decoration-none navButtons"><i class="fas fa-search mx-3"></i>Cerca</a></li>
+                <li class="my-2"><a href="homepage.html" class="text-decoration-none navButtons"><i class="fas fa-home-lg-alt mx-3"></i>Home</a></li>
+                <li class="my-2"><a href="search.html" class="text-decoration-none navButtons"><i class="fas fa-search mx-3"></i>Cerca</a></li>
                 <li class="my-2"><a href="#" class="text-decoration-none navButtons"><i class="fas fa-book mx-3"></i>la tua libreria</a></li>
              </ul>
             </div>
@@ -94,7 +93,7 @@
 
 
         <div class="col-12 col-md-8 bg-dark d-block" id="center-screen">
-          <div class="row">
+          <div class="row" id="topButtonsScreen">
             <div class="col buttoncontainer"><button class="upperButtons"><i class="fas fa-chevron-left"></i></button> <button class="upperButtons"><i class="fas fa-chevron-right"></i></button></div>
             <div class="col"></div>
         
@@ -128,20 +127,23 @@
 
           <!--(CENTER SCREEN Corpo Centrale)-->
 
-          <h2 class="buonaseraTitle">Buonasera</h2>
-          
+
+          <div id="topIconsContainer">  
+          <h2 id="buonaseraTitlePrincipale">Buonasera</h2>  <span class="d-inline d-md-none"><i class="far fa-bell"></i> <i class="fas fa-clock"></i><i class="fas fa-cog"></i></span>
+          </div>
+
           <div class="row row-cols-xs-2 row-cols-sm-3" id="cardContainer">
             
             
             <div class="col">
               <div class="card mb-3 cardCentralBuonasera">
-              <div class="row g-0">
-                <div class="col-md-3">
+              <div class="row g-0 rowBuonasera">
+                <div class="col-3 colBuonasera">
                   <img src="assets/imgs/main/image-3.jpg" class="img-fluid rounded-start" alt="...">
                 </div>
-                <div class="col-md-8 cardRightSideBuonasera">
+                <div class="col cardRightSideBuonasera">
                   <div class="card-body buonaseraCard">
-                    <p class="card-text">Per studiare tranquilli. <br> (2023) </p>
+                    <p class="card-text">Per studiare. <br> (2023) </p>
                     <button type="button" class="btn btn-success mx-2 text-light d-none">Play</button>
                   </div>
                 </div>
@@ -151,11 +153,11 @@
             
             <div class="col">
               <div class="card mb-3 cardCentralBuonasera">
-              <div class="row g-0">
-                <div class="col-md-3">
+              <div class="row g-0 rowBuonasera">
+                <div class="col-3 colBuonasera">
                   <img src="assets/imgs/main/image-4.jpg" class="img-fluid rounded-start" alt="...">
                 </div>
-                <div class="col-md-8 cardRightSideBuonasera">
+                <div class="col cardRightSideBuonasera">
                   <div class="card-body buonaseraCard">
                     <p class="card-text">Piano chillout music.</p>
                     <button type="button" class="btn btn-success mx-2 text-light d-none">Play</button>
@@ -167,11 +169,11 @@
 
             <div class="col">
               <div class="card mb-3 cardCentralBuonasera">
-              <div class="row g-0">
-                <div class="col-md-3">
+              <div class="row g-0 rowBuonasera">
+                <div class="col-3 colBuonasera">
                   <img src="assets/imgs/main/image-5.jpg" class="img-fluid rounded-start" alt="...">
                 </div>
-                <div class="col-md-8 cardRightSideBuonasera">
+                <div class="col cardRightSideBuonasera">
                   <div class="card-body buonaseraCard">
                     <p class="card-text">Lofi per rilassarti brother.</p>
                     <button type="button" class="btn btn-success mx-2 text-light d-none">Play</button>
@@ -183,11 +185,11 @@
 
             <div class="col">
               <div class="card mb-3 cardCentralBuonasera">
-              <div class="row g-0">
-                <div class="col-md-3">
+              <div class="row g-0 rowBuonasera">
+                <div class="col-3 colBuonasera">
                   <img src="assets/imgs/main/image-6.jpg" class="img-fluid rounded-start" alt="...">
                 </div>
-                <div class="col-md-8 cardRightSideBuonasera">
+                <div class="col cardRightSideBuonasera">
                   <div class="card-body buonaseraCard">
                     <p class="card-text">Jazz all over the place.</p>
                     <button type="button" class="btn btn-success mx-2 text-light d-none">Play</button>
@@ -199,11 +201,11 @@
 
             <div class="col">
               <div class="card mb-3 cardCentralBuonasera">
-              <div class="row g-0">
-                <div class="col-md-3">
+              <div class="row g-0 rowBuonasera">
+                <div class="col-3 colBuonasera">
                   <img src="assets/imgs/main/image-7.jpg" class="img-fluid rounded-start" alt="...">
                 </div>
-                <div class="col-md-8 cardRightSideBuonasera">
+                <div class="col cardRightSideBuonasera">
                   <div class="card-body buonaseraCard">
                     <p class="card-text">Coffee and music!!</p>
                     <button type="button" class="btn btn-success mx-2 text-light d-none">Play</button>
@@ -215,11 +217,11 @@
 
             <div class="col">
               <div class="card mb-3 cardCentralBuonasera">
-              <div class="row g-0">
-                <div class="col-md-3">
+              <div class="row g-0 rowBuonasera">
+                <div class="col-3 colBuonasera">
                   <img src="assets/imgs/main/image-8.jpg" class="img-fluid rounded-start" alt="...">
                 </div>
-                <div class="col-md-8 cardRightSideBuonasera">
+                <div class="col cardRightSideBuonasera">
                   <div class="card-body buonaseraCard">
                     <p class="card-text">Anarchia totale!</p>
                     <button type="button" class="btn btn-success mx-2 text-light d-none">Play</button>
@@ -234,7 +236,7 @@
 
           <h2 class="buonaseraTitle">Album</h2>
 
-          <div class="row row-cols-xs-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5" id="albumRow">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5" id="albumRow">
 
             <div class="col colCentralPlaylistCard"> 
               <div class="card centralPlaylistCard">
@@ -242,6 +244,7 @@
                 <div class="card-body centralPlaylistCardBody">
                   <h5 class="card-title"><a class="card-link" href=""></a></h5>
                   <p class="card-text cardP"><a class="card-link" href=""></a></p>
+                  <button id="play-button" class="powerPlayer"><i class="fas fa-play"></i></button>
                 </div>
               </div>
             </div>
@@ -252,6 +255,7 @@
                 <div class="card-body centralPlaylistCardBody">
                   <h5 class="card-title"><a class="card-link" href=""></a></h5>
                   <p class="card-text cardP"><a class="card-link" href=""></a></p>
+                  <button id="play-button" class="powerPlayer"><i class="fas fa-play"></i></button>
                 </div>
               </div>
             </div>
@@ -262,6 +266,7 @@
                 <div class="card-body centralPlaylistCardBody">
                   <h5 class="card-title"><a class="card-link" href=""></a></h5>
                   <p class="card-text cardP"><a class="card-link" href=""></a></p>
+                  <button id="play-button" class="powerPlayer"><i class="fas fa-play"></i></button>
                 </div>
               </div>
             </div>
@@ -272,6 +277,7 @@
                 <div class="card-body centralPlaylistCardBody">
                   <h5 class="card-title"><a class="card-link" href=""></a></h5>
                   <p class="card-text cardP"><a class="card-link" href=""></a></p>
+                  <button id="play-button" class="powerPlayer"><i class="fas fa-play"></i></button>
                 </div>
               </div>
             </div>
@@ -282,6 +288,7 @@
                 <div class="card-body centralPlaylistCardBody">
                   <h5 class="card-title"><a class="card-link" href=""></a></h5>
                   <p class="card-text cardP"><a class="card-link" href=""></a></p>
+                  <button id="play-button" class="powerPlayer"><i class="fas fa-play"></i></button>
                 </div>
               </div>
             </div>
@@ -290,7 +297,7 @@
 
           <h2 class="buonaseraTitle">Altro di cio che ti piace</h2>
 
-          <div class="row row-cols-xs-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
 
             <div class="col colCentralPlaylistCard"> 
               <div class="card centralPlaylistCard">
@@ -298,7 +305,7 @@
                 <div class="card-body centralPlaylistCardBody">
                   <h5 class="card-title">Weekly Hits</h5>
                   <p class="card-text cardP">Enjoy music the music</p>
-                  <a href="#" class="btn btn-primary d-none">Play it!</a>
+                  <button id="play-button"><i class="fas fa-play"></i></button>
                 </div>
               </div>
             </div>
@@ -309,7 +316,7 @@
                 <div class="card-body centralPlaylistCardBody">
                   <h5 class="card-title">Alternative techno</h5>
                   <p class="card-text cardP">Electric Summer incoming</p>
-                  <a href="#" class="btn btn-primary d-none">Play it!</a>
+                  <button id="play-button"><i class="fas fa-play"></i></button>
                 </div>
               </div>
             </div>
@@ -320,7 +327,7 @@
                 <div class="card-body centralPlaylistCardBody">
                   <h5 class="card-title">Weedlist</h5>
                   <p class="card-text cardP">La tipa ha fumato sicuro</p>
-                  <a href="#" class="btn btn-primary d-none">Play it!</a>
+                  <button id="play-button"><i class="fas fa-play"></i></button>
                 </div>
               </div>
             </div>
@@ -331,7 +338,7 @@
                 <div class="card-body centralPlaylistCardBody">
                   <h5 class="card-title">Swag?!</h5>
                   <p class="card-text cardP">Feeling cool</p>
-                  <a href="#" class="btn btn-primary d-none">Play it!</a>
+                  <button id="play-button"><i class="fas fa-play"></i></button>
                 </div>
               </div>
             </div>
@@ -342,7 +349,7 @@
                 <div class="card-body centralPlaylistCardBody">
                   <h5 class="card-title">Oye Vamos Nene!</h5>
                   <p class="card-text cardP">Como cada verano..</p>
-                  <a href="#" class="btn btn-primary d-none">Play it!</a>
+                  <button id="play-button"><i class="fas fa-play"></i></button>
                 </div>
               </div>
             </div>
@@ -352,7 +359,7 @@
 
           <h2 class="buonaseraTitle">Playlist DefJam</h2>
 
-          <div class="row row-cols-xs-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
 
             <div class="col colCentralPlaylistCard"> 
               <div class="card centralPlaylistCard">
@@ -360,7 +367,7 @@
                 <div class="card-body centralPlaylistCardBody">
                   <h5 class="card-title">Hot Hits Italia</h5>
                   <p class="card-text cardP">Yo yo hermano!</p>
-                  <a href="#" class="btn btn-primary d-none">Play it!</a>
+                  <button id="play-button"><i class="fas fa-play"></i></button>
                 </div>
               </div>
             </div>
@@ -371,7 +378,7 @@
                 <div class="card-body centralPlaylistCardBody">
                   <h5 class="card-title">Summer </h5>
                   <p class="card-text cardP">Fresh Summer.</p>
-                  <a href="#" class="btn btn-primary d-none">Play it!</a>
+                  <button id="play-button"><i class="fas fa-play"></i></button>
                 </div>
               </div>
             </div>
@@ -382,7 +389,7 @@
                 <div class="card-body centralPlaylistCardBody">
                   <h5 class="card-title">Grungy stuff</h5>
                   <p class="card-text cardP">Trash everyone!</p>
-                  <a href="#" class="btn btn-primary d-none">Play it!</a>
+                  <button id="play-button"><i class="fas fa-play"></i></button>
                 </div>
               </div>
             </div>
@@ -393,7 +400,7 @@
                 <div class="card-body centralPlaylistCardBody">
                   <h5 class="card-title">Streets</h5>
                   <p class="card-text cardP">You already know</p>
-                  <a href="#" class="btn btn-primary d-none">Play it!</a>
+                  <button id="play-button"><i class="fas fa-play"></i></button>
                 </div>
               </div>
             </div>
@@ -404,7 +411,7 @@
                 <div class="card-body centralPlaylistCardBody">
                   <h5 class="card-title">Capelli ovunque</h5>
                   <p class="card-text cardP">La tipa non vede!</p>
-                  <a href="#" class="btn btn-primary d-none">Play it!</a>
+                  <button id="play-button"><i class="fas fa-play"></i></button>
                 </div>
               </div>
             </div>
@@ -414,7 +421,7 @@
 
           <h2 class="buonaseraTitle">Rolling over something</h2>
 
-          <div class="row row-cols-xs-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
 
             <div class="col colCentralPlaylistCard"> 
               <div class="card centralPlaylistCard">
@@ -422,7 +429,7 @@
                 <div class="card-body centralPlaylistCardBody">
                   <h5 class="card-title">Best in World</h5>
                   <p class="card-text cardP">10s Best Hits</p>
-                  <a href="#" class="btn btn-primary d-none">Play it!</a>
+                  <button id="play-button"><i class="fas fa-play"></i></button>
                 </div>
               </div>
             </div>
@@ -433,7 +440,7 @@
                 <div class="card-body centralPlaylistCardBody">
                   <h5 class="card-title">Clean and fun </h5>
                   <p class="card-text cardP">Clean and listen</p>
-                  <a href="#" class="btn btn-primary d-none">Play it!</a>
+                  <button id="play-button"><i class="fas fa-play"></i></button>
                 </div>
               </div>
             </div>
@@ -444,7 +451,7 @@
                 <div class="card-body centralPlaylistCardBody">
                   <h5 class="card-title">Fit and music</h5>
                   <p class="card-text cardP">Keep in fit baby!</p>
-                  <a href="#" class="btn btn-primary d-none">Play it!</a>
+                  <button id="play-button"><i class="fas fa-play"></i></button>
                 </div>
               </div>
             </div>
@@ -455,7 +462,7 @@
                 <div class="card-body centralPlaylistCardBody">
                   <h5 class="card-title">Homechilling..</h5>
                   <p class="card-text cardP">Relax and chill</p>
-                  <a href="#" class="btn btn-primary d-none">Play it!</a>
+                  <button id="play-button"><i class="fas fa-play"></i></button>
                 </div>
               </div>
             </div>
@@ -466,14 +473,13 @@
                 <div class="card-body centralPlaylistCardBody">
                   <h5 class="card-title">Homework</h5>
                   <p class="card-text cardP">You have to work anyway</p>
-                  <a href="#" class="btn btn-primary d-none">Play it!</a>
+                  <button id="play-button"><i class="fas fa-play"></i></button>
                 </div>
               </div>
             </div>
           
           
           </div>
-
 
 
         </div>
@@ -565,10 +571,10 @@
       <div id="smallerContainer"> 
         <ul class="navbar-nav" id="smallNavbarLinks">
           <li class="nav-item active">
-            <a class="nav-link smallerNavLink" href="#"><i class="fas fa-home-lg-alt mx-3"></i>Home</a>
+            <a class="nav-link smallerNavLink" href="homepage.html"><i class="fas fa-home-lg-alt mx-3"></i>Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link smallerNavLink" href="#"><i class="fas fa-search mx-3"></i>Cerca</a>
+            <a class="nav-link smallerNavLink" href="search.html"><i class="fas fa-search mx-3"></i>Cerca</a>
           </li>
           <li class="nav-item">
             <a class="nav-link smallerNavLink" href="#"><i class="fas fa-book mx-3"></i>La tua libreria</a>
@@ -582,15 +588,16 @@
 
     <section id="player" class="d-flex justify-content-between align-items-center p-3">
       <div class="player-song">
-          <img src="assets/imgs/main/image-1.jpg" alt="">
+          <img src="assets/imgs/main/image-1.jpg" alt="" id="audioImg">
           <div class="song-player">
-              <p class="m-0 fw-bold text-white">Fat Funny Friend</p>
-              <p class="m-0 text-white-50 song-artist">Maddie Zahm</p>
+              <p class="m-0 fw-bold text-white" id="audioTitle">Fat Funny Friend</p>
+              <p class="m-0 text-white-50 song-artist" id="audioArtist">Maddie Zahm</p>
           </div>
           <i class="fa-regular fa-heart text-white-50"></i>
       </div>
 
       <div>
+        <audio id="audioPlayer" src=""></audio>
           <div class="player-middle d-flex justify-content-center gap-2">
               <button><i class="fas fa-random green-btn"></i></button>
               <button><i class="fas fa-step-backward text-white-50"></i></button>
@@ -627,6 +634,24 @@
           progressBar=document.querySelector(".slider progress");
           progressBar.value=slider.value;
       })
+
+      let isPlaying = false;
+
+      let playButton = document.querySelector('.fa-play-circle');
+      let audioPlayer = document.querySelector('#audioPlayer');
+
+      playButton.addEventListener("click", () => {
+        if (isPlaying) {
+          audioPlayer.pause();
+          playButton.classList.remove('fa-pause-circle');
+          playButton.classList.add('fa-play-circle');
+        } else {
+          audioPlayer.play();
+          playButton.classList.remove('fa-play-circle');
+          playButton.classList.add('fa-pause-circle');
+        }
+        isPlaying = !isPlaying;
+      });
   </script>
 
 
