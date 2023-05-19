@@ -104,6 +104,9 @@ body {
     margin-bottom : 0px;
     color: rgb(122, 122, 122);
     font-size: 0.75rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis !important;
 }
 
 
@@ -144,6 +147,11 @@ body {
 }
 .fa-clock{
     margin-right: 1.5rem
+}
+
+.card-link{
+    color: white;
+    text-decoration: none;
 }
 
 .upperButtons{
@@ -352,14 +360,18 @@ body {
     width: 40px;
     height: 40px;
     position: absolute;
-    top: 1rem;
+    top: 2.2rem;
     right: 0.3rem;
     display: none;
+}
+.fa-times{
+    margin-left: 1rem; 
 }
 
 #play-button i {
     padding: 10px;
 }
+
 .card:hover #play-button {
     display: block;
 }
