@@ -49,4 +49,20 @@ fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=queen", {
           });
       });
     });
+<<<<<<< HEAD
   });
+=======
+});
+
+let date = new Date();
+let hours = date.getHours();
+console.log(hours);
+let title = document.getElementById('buonaseraTitlePrincipale');
+
+if(hours < 12) {
+}else if(hours >= 12) {
+    title.innerHTML = 'Buon pomeriggio';
+}else if(hours >= 18) {
+    title.innerHTML = 'Buonasera';
+}
+>>>>>>> origin/Gabriele-Branch

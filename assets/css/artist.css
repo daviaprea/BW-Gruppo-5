@@ -234,6 +234,7 @@ body {
 
 .artist-song-content:hover i {
     display: block;
+    font-size: 12px;
 }
 
 .streaming-number  {
@@ -278,11 +279,6 @@ body {
     border-radius: 100%;
     padding: 7px 10px;
     color: #fff;
-}
-
-.smallerNavLink:hover {
-    color: rgb(255, 255, 255);
-    font-size: 1.2rem;
 }
 
 .smallerNavLink:active {
@@ -331,6 +327,10 @@ body {
     align-items: center;
 }
 
+#heart {
+    display: none;
+}
+
 @media screen and (max-width: 550px) {
     #left-screen {
         display: none;
@@ -373,10 +373,35 @@ body {
         font-size: 16px;
         font-weight: normal;
     }
-    #main-col {
-        height: 100vh;
+    #player {
+        height: 50px;
+        background-color: #282828;
     }
-    #smallNavbar {
+    .audio-handler {
+        display: none !important;
+    }
+    .slider {
+        display: none;
+    }
+    .song-artist {
+        display: none;
+    }
+    #undo, #forward, #backward, #random {
+        display: none;
+    }
+    .player-song i {
+        display: none;
+    }
+    .player-song img {
+        width: 40px;
+        height: 40px !important;
+    }
+    #heart {
         display: block;
+        font-size: 20px;
+    }
+    .player-middle {
+        display: flex;
+        align-items: center;
     }
 }
