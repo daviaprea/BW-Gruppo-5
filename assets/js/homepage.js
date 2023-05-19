@@ -31,27 +31,41 @@ fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=queen", {
             } else {
               throw new Error("Errore fetch");
             }
-        })
-        .then(fetchObj => {
-            if (fetchObj.data && fetchObj.data.length > 0) {
-                const firstSong = fetchObj.data[0];
-                console.log(firstSong);
-                const audioPlayer = document.querySelector('#player');
-                audioPlayer.src = firstSong.artist.preview;
+          })
+          .then(albumObj => {
+            if (albumObj.tracks && albumObj.tracks.data && albumObj.tracks.data.length > 0) {
+              const firstSong = albumObj.tracks.data[0];
+              console.log(firstSong);
+              const audioPlayer = document.querySelector('#audioPlayer');
+              const audioImg = document.getElementById('audioImg');
+              const audioTitle = document.getElementById('audioTitle');
+              const audioArtist = document.getElementById('audioArtist')
+              audioArtist.innerHTML = firstSong.artist.name;
+              audioTitle.innerHTML = firstSong.album.title;
+              audioImg.src = firstSong.album.cover_medium;
+              audioPlayer.src = firstSong.preview;
+              console.log(firstSong.preview);
+              
+              audioPlayer.addEventListener('canplay', function() {
                 audioPlayer.play();
               });
             }
           })
           .catch(err => {
             console.log(err);
-        });
+          });
+      });
     });
-});
+  });
+  
+let date = new Date();
+let hours = date.getHours();
+console.log(hours);
+let title = document.getElementById('buonaseraTitlePrincipale');
 
-
-
-
-
-
-
-
+if(hours < 12) {
+}else if(hours >= 12) {
+    title.innerHTML = 'Buon pomeriggio';
+}else if(hours >= 18) {
+    title.innerHTML = 'Buonasera';
+}
