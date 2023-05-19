@@ -56,13 +56,8 @@ fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=queen", {
           });
       });
     });
-
   });
-
-
-
-
-
+  
 let date = new Date();
 let hours = date.getHours();
 console.log(hours);
