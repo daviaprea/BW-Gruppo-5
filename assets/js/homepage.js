@@ -56,15 +56,13 @@ fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=queen", {
           });
       });
     });
-<<<<<<< HEAD
-<<<<<<< HEAD
-  });
-=======
-});
 
-=======
   });
->>>>>>> origin/Branch-Gerald
+
+
+
+
+
 let date = new Date();
 let hours = date.getHours();
 console.log(hours);
@@ -76,7 +74,3 @@ if(hours < 12) {
 }else if(hours >= 18) {
     title.innerHTML = 'Buonasera';
 }
-<<<<<<< HEAD
->>>>>>> origin/Gabriele-Branch
-=======
->>>>>>> origin/Branch-Gerald
