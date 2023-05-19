@@ -75,9 +75,38 @@
 
 @media screen and (max-width: 760px){
     #player{
-    position: fixed;
-    width: 100%;
-    bottom: 80px;
-    background-color: #181818;
+        position: fixed;
+        width: 92%;
+        bottom: 80px;
+        background-color: #181818;
+        margin-inline: 1rem;
+        border-radius: 10px;
+    }
+    .audio-handler {
+        display: none !important;
+    }
+    .slider {
+        display: none;
+    }
+    .song-artist {
+        display: none;
+    }
+    #undo, #forward, #backward, #random {
+        display: none;
+    }
+    .player-song i {
+        display: none;
+    }
+    .player-song img {
+        width: 40px;
+        height: 40px !important;
+    }
+    #heart {
+        display: block;
+        font-size: 20px;
+    }
+    .player-middle {
+        display: flex;
+        align-items: center;
     }
 }

@@ -72,9 +72,9 @@
         <div class="col col-md-8 bg-dark" id="main-col">
           <div class="row">
             <div class="col d-flex flex-column justify-content-end" id="artist-information">
-              <div class="buttoncontainer">
+              <div class="buttoncontainer d-flex">
                 <button><i class="fas fa-chevron-left"></i></button>
-                <button><i class="fas fa-chevron-right"></i></button>
+                <button class="d-none d-md-block"><i class="fas fa-chevron-right"></i></button>
               </div>
               <p id="certificate-artist"><i class="fas fa-certificate" id="certificate"><i class="fas fa-check" id="check"></i></i>Artista verificato</p>
               <h1 id="name-artist"></h1>
@@ -88,13 +88,23 @@
               <i class="fas fa-ellipsis-h" id="dots-h"></i>
               <i class="fas fa-ellipsis-v" id="dots-v"></i>
             </div>
+            <div class="col d-flex align-items-center justify-content-end d-md-none">
+              <i class="fas fa-random green-btn mx-3"></i>
+              <button id="play-button-mobile"><i class="fas fa-play"></i></button>
+            </div>
           </div>
-          <div class="row mt-4 d-flex flex-column-reverse d-md-flex flex-md-row">
-            <div class="col-8">
+          <div class="row mt-md-4 d-flex flex-column-reverse d-md-flex flex-md-row align-items-md-start">
+            <div class="col-6 col-md-8">
               <h5>Popolari</h5>
             </div>
-            <div class="col-4">
-              <h5>Brani che ti piacciono</h5>
+            <div class="col-8 col-md-4 d-flex align-items-start flex-md-column-reverse my-2">
+            <div class="d-flex align-items-md-end">
+              <img src="assets/imgs/main/image-12.jpg" id="cover-favourite-songs" alt="">
+              <div class="mx-2" id="favourite-songs">
+                <h5>Brani che ti piacciono</h5>
+                <p>Hai messo mi piace a 8 brani dei Queen</p>
+              </div>
+            </div>
             </div>
           </div>
           <div class="row px-md-4 mt-3">
@@ -108,6 +118,7 @@
                     <h6 class="m-0"></h6>
                   </div>
                   <p class="streaming-number flex-grow-1 text-end">23526</p>
+                  <i class="fas fa-ellipsis-v" id="vertical-dots"></i>
                   <p class="duration flex-grow-1 text-end"></p>
                 </div>
                 <div class="d-flex align-items-center">
@@ -118,6 +129,7 @@
                     <h6 class="m-0"></h6>
                   </div>
                   <p class="streaming-number flex-grow-1 text-end">23526</p>
+                  <i class="fas fa-ellipsis-v" id="vertical-dots"></i>
                   <p class="duration flex-grow-1 text-end"></p>
                 </div>
                 <div class="d-flex align-items-center">
@@ -128,6 +140,7 @@
                     <h6 class="m-0"></h6>
                   </div>
                   <p class="streaming-number flex-grow-1 text-end">23526</p>
+                  <i class="fas fa-ellipsis-v" id="vertical-dots"></i>
                   <p class="duration flex-grow-1 text-end"></p>
                 </div>
                 <div class="d-flex align-items-center">
@@ -138,6 +151,7 @@
                     <h6 class="m-0"></h6>
                   </div>
                   <p class="streaming-number flex-grow-1 text-end">23526</p>
+                  <i class="fas fa-ellipsis-v" id="vertical-dots"></i>
                   <p class="duration flex-grow-1 text-end"></p>
                 </div>
                 <div class="d-flex align-items-center">
@@ -148,6 +162,7 @@
                     <h6 class="m-0"></h6>
                   </div>
                   <p class="streaming-number flex-grow-1 text-end">23526</p>
+                  <i class="fas fa-ellipsis-v" id="vertical-dots"></i>
                   <p class="duration flex-grow-1 text-end"></p>
                 </div>
               </div>
@@ -274,25 +289,21 @@
       </div>
     </section>
 
-    <div class="row g-0">
-      <div class="col">
-        <nav id="smallNavbar" class="navbar navbar-expand-lg navbar-light d-md-none">
-          <div id="smallerContainer"> 
-            <ul class="navbar-nav" id="smallNavbarLinks">
-              <li class="nav-item active">
-                <a class="nav-link smallerNavLink" href="Homepage.html"><i class="fas fa-home-lg-alt mx-3"></i>Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link smallerNavLink" href="Search.html"><i class="fas fa-search mx-3"></i>Cerca</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link smallerNavLink" href="#"><i class="fas fa-book mx-3"></i>La tua libreria</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+    <nav id="smallNavbar" class="navbar navbar-expand-lg navbar-light d-md-none">
+      <div id="smallerContainer"> 
+        <ul class="navbar-nav" id="smallNavbarLinks">
+          <li class="nav-item active">
+            <a class="nav-link smallerNavLink" href="Homepage.html"><i class="fas fa-home-lg-alt mx-3"></i>Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link smallerNavLink" href="Search.html"><i class="fas fa-search mx-3"></i>Cerca</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link smallerNavLink" href="#"><i class="fas fa-book mx-3"></i>La tua libreria</a>
+          </li>
+        </ul>
       </div>
-    </div>
+    </nav>
 
     <script>
       let slider=document.querySelector(".range");
