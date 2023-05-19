@@ -8,9 +8,9 @@ let feed=function(query)
         console.log(queryData);
         document.querySelector(".artist-side-search").innerHTML=
         `
-            <img class="rounded-circle align-self-start artist-search-img" src="${queryData.data[0].artist.picture}" alt="">
-            <h3 class="text-white fw-bold">${queryData.data[0].artist.name}</h3>
-            <span class="text-white fw-bold">${queryData.data[0].artist.type}</span>
+            <img class="rounded-circle align-self-start artist-search-img mx-3" src="${queryData.data[0].artist.picture}" alt="">
+            <h3 class="text-white fw-bold px-3">${queryData.data[0].artist.name}</h3>
+            <span class="text-white fw-bold px-3">${queryData.data[0].artist.type}</span>
         `;
 
         document.querySelector(".song-side-search").innerHTML="";
