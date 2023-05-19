@@ -76,8 +76,10 @@
 @media screen and (max-width: 760px){
     #player{
     position: fixed;
-    width: 100%;
+    width: 92%;
     bottom: 80px;
     background-color: #181818;
+    margin-inline: 1rem;
+    border-radius: 10px;
     }
 }

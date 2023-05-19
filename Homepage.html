@@ -609,12 +609,12 @@
               <button><i class="fas fa-undo green-btn"></i></button>
           </div>
           <div class="d-flex align-items-center gap-2">
-              <span class="text-white-50 song-artist">0:58</span>
+              <span class="text-white-50 song-artist" id="timePassing">0:58</span>
               <div class="slider">
                   <input type="range" class="range">
                   <progress min="0" max="100" value="50"></progress>
               </div>
-              <span class="text-white-50 song-artist">3:20</span>
+              <span class="text-white-50 song-artist" id="maxDurationTime">3:20</span>
           </div>
       </div>
 
@@ -655,6 +655,25 @@
         }
         isPlaying = !isPlaying;
       });
+
+      audioPlayer.addEventListener('timeupdate', () => {
+          let timePassing = document.getElementById('timePassing');
+          let maxDurationTime = document.getElementById('maxDurationTime');
+          const currentTime = audioPlayer.currentTime;
+          const duration = audioPlayer.duration;
+          const slider = document.querySelector('.range');
+          const progressBar = document.querySelector('.slider progress');
+          
+          const progressPercentage = (currentTime / duration) * 100;
+
+
+          slider.value = progressPercentage;
+          progressBar.value = progressPercentage;
+          timePassing.textContent = Math.floor(currentTime) + 's';
+          maxDurationTime.textContent = Math.floor(duration) + 's';
+
+          });
+
   </script>
 
 
