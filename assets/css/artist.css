@@ -281,11 +281,6 @@ body {
     color: #fff;
 }
 
-.smallerNavLink:hover {
-    color: rgb(255, 255, 255);
-    font-size: 1.2rem;
-}
-
 .smallerNavLink:active {
     color: rgb(255, 255, 255);
 }
@@ -332,6 +327,10 @@ body {
     align-items: center;
 }
 
+#heart {
+    display: none;
+}
+
 @media screen and (max-width: 550px) {
     #left-screen {
         display: none;
@@ -373,5 +372,36 @@ body {
     .artist-song-content h6 {
         font-size: 16px;
         font-weight: normal;
+    }
+    #player {
+        height: 50px;
+        background-color: #282828;
+    }
+    .audio-handler {
+        display: none !important;
+    }
+    .slider {
+        display: none;
+    }
+    .song-artist {
+        display: none;
+    }
+    #undo, #forward, #backward, #random {
+        display: none;
+    }
+    .player-song i {
+        display: none;
+    }
+    .player-song img {
+        width: 40px;
+        height: 40px !important;
+    }
+    #heart {
+        display: block;
+        font-size: 20px;
+    }
+    .player-middle {
+        display: flex;
+        align-items: center;
     }
 }

@@ -152,7 +152,6 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4"></div>
           </div>
           <div class="row px-4">
             <div class="col">
@@ -168,6 +167,7 @@
             </div>
 
             <aside id="right-aside">
+              
               <div class="col righterCol">
                 <div class="card mb-3 bg-black text-gray">
                   <div class="row g-0">
@@ -224,6 +224,7 @@
                   </div>
                 </div>
               </div>
+
             </aside>
           </div>
         </div>
@@ -242,11 +243,13 @@
 
       <div>
         <div class="player-middle d-flex justify-content-center gap-2">
-          <button><i class="fas fa-random green-btn"></i></button>
-          <button><i class="fas fa-step-backward text-white-50"></i></button>
+          <button id="random"><i class="fas fa-random green-btn"></i></button>
+          <button id="backward"><i class="fas fa-step-backward text-white-50"></i></button>
+          
+          <button id="heart"><i class="fa-regular fa-heart text-white"></i></button>
           <button><i class="fas fa-play-circle text-white fs-2"></i></button>
-          <button><i class="fas fa-step-forward text-white-50"></i></button>
-          <button><i class="fas fa-undo green-btn"></i></button>
+          <button id="forward"><i class="fas fa-step-forward text-white-50"></i></button>
+          <button id="undo"><i class="fas fa-undo green-btn"></i></button>
         </div>
         <div class="d-flex align-items-center gap-2">
             <span class="text-white-50 song-artist">0:58</span>
@@ -271,7 +274,7 @@
       </div>
     </section>
 
-    <div class="row">
+    <div class="row g-0">
       <div class="col">
         <nav id="smallNavbar" class="navbar navbar-expand-lg navbar-light d-md-none">
           <div id="smallerContainer"> 
