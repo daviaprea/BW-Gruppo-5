@@ -31,7 +31,7 @@ const getAlbum = function () {
                 <div class="card mb-3 p-2 text-light bg-transparent border-0" id="central-card">
                     <div class="row g-0">
                     <div class="col-md-3 col">
-                        <img src="${songs.cover_medium}" class="img-fluid rounded-start shadow-lg" alt="Album cover">
+                        <div id="container"><img src="${songs.cover_medium}" class="img-fluid rounded-start shadow-lg" alt="Album cover"></div>
                     </div>
                     <div class="col-md-8 text-white d-flex">
                         <div class="card-body align-self-end">
@@ -72,156 +72,158 @@ const getAlbum = function () {
                           
                       
                       `
-                //  
-                const playPauseButton = document.getElementById("play-pause-button");
-                const restartButton = document.getElementById("restart-button");
-                const audio = new Audio(`${el.preview}`);
-        
-                let playAcceso = false;
-        
-                playPauseButton.addEventListener("click", function () {
-                    if (playAcceso) {
-                        audio.pause();
-                        playPauseButton.innerHTML = '<i class="fas fa-play-circle text-white fs-2"></i>';
-                    } else {
-                        audio.play();
-                        playPauseButton.innerHTML = '<i class="fas fa-pause-circle text-white fs-2"></i>';
+                
+                  const playPauseButton = document.getElementById("play-pause-button");
+                  const restartButton = document.getElementById("restart-button");
+                  const audio = new Audio(`${el.preview}`);
+          
+                  let playAcceso = false;
+          
+                  playPauseButton.addEventListener("click", function () {
+                      if (playAcceso) {
+                          audio.pause();
+                          playPauseButton.innerHTML = '<i class="fas fa-play-circle text-white fs-2"></i>';
+                      } else {
+                          audio.play();
+                          playPauseButton.innerHTML = '<i class="fas fa-pause-circle text-white fs-2"></i>';
+                      }
+                      playAcceso = !playAcceso;
+                  });
+          
+                  restartButton.addEventListener("click", function () {
+                      audio.currentTime = 0;
+                      if (!playAcceso) {
+                          audio.play();
+                          playPauseButton.innerHTML = '<i class="fas fa-pause-circle text-white fs-2"></i>';
+                          playAcceso = true;
+                      }
+                  });
+          
+                  audio.addEventListener("timeupdate", function () {
+                      const progress = (audio.currentTime / audio.duration) * 100;
+                      const currentTime = formatTime(audio.currentTime);
+                      const duration = formatTime(audio.duration);
+          
+                      document.getElementById("seek-slider").value = progress;
+                      document.getElementById("progress-bar").value = progress;
+                      document.getElementById("current-time").textContent = currentTime;
+                      document.getElementById("duration").textContent = duration;
+                  });
+          
+                  function formatTime(timeInSeconds) {
+                      const minutes = Math.floor(timeInSeconds / 60);
+                      const seconds = Math.floor(timeInSeconds % 60);
+                      return `${minutes}:${seconds.toString().padStart(2, "0")}`;
+                  }
+              });
+          
+                    // crea un canvas con l'immagine e ne ritorno il context 2d
+                    const draw = function (img) {
+                      let canvas = document.createElement('canvas')
+                      let c = canvas.getContext('2d')
+                      c.width = canvas.width = img.clientWidth
+                      c.height = canvas.height = img.clientHeight
+                      c.clearRect(0, 0, c.width, c.height)
+                      c.drawImage(img, 0, 0, img.clientWidth, img.clientHeight)
+                      return c
                     }
-                    playAcceso = !playAcceso;
-                });
-        
-                restartButton.addEventListener("click", function () {
-                    audio.currentTime = 0;
-                    if (!playAcceso) {
-                        audio.play();
-                        playPauseButton.innerHTML = '<i class="fas fa-pause-circle text-white fs-2"></i>';
-                        playAcceso = true;
+
+                    // scompone pixel per pixel e ritorna un oggetto con una mappa della loro frequenza nell'immagine
+                    const getColors = function (c) {
+                      let col,
+                        colors = {}
+                      let pixels, r, g, b, a
+                      r = g = b = a = 0
+                      pixels = c.getImageData(0, 0, c.width, c.height)
+                      for (let i = 0, data = pixels.data; i < data.length; i += 4) {
+                        r = data[i]
+                        g = data[i + 1]
+                        b = data[i + 2]
+                        a = data[i + 3]
+                        if (a < 255 / 2) continue
+                        col = rgbToHex(r, g, b)
+                        if (!colors[col]) colors[col] = 0
+                        colors[col]++
+                      }
+                      return colors
                     }
-                });
-        
-                audio.addEventListener("timeupdate", function () {
-                    const progress = (audio.currentTime / audio.duration) * 100;
-                    const currentTime = formatTime(audio.currentTime);
-                    const duration = formatTime(audio.duration);
-        
-                    document.getElementById("seek-slider").value = progress;
-                    document.getElementById("progress-bar").value = progress;
-                    document.getElementById("current-time").textContent = currentTime;
-                    document.getElementById("duration").textContent = duration;
-                });
-        
-                function formatTime(timeInSeconds) {
-                    const minutes = Math.floor(timeInSeconds / 60);
-                    const seconds = Math.floor(timeInSeconds % 60);
-                    return `${minutes}:${seconds.toString().padStart(2, "0")}`;
-                }
-            });
-        
-            // crea un canvas con l'immagine e ne ritorno il context 2d
-const draw = function (img) {
-  let canvas = document.createElement('canvas')
-  let c = canvas.getContext('2d')
-  c.width = canvas.width = img.clientWidth
-  c.height = canvas.height = img.clientHeight
-  c.clearRect(0, 0, c.width, c.height)
-  c.drawImage(img, 0, 0, img.clientWidth, img.clientHeight)
-  return c
-}
 
-// scompone pixel per pixel e ritorna un oggetto con una mappa della loro frequenza nell'immagine
-const getColors = function (c) {
-  let col,
-    colors = {}
-  let pixels, r, g, b, a
-  r = g = b = a = 0
-  pixels = c.getImageData(0, 0, c.width, c.height)
-  for (let i = 0, data = pixels.data; i < data.length; i += 4) {
-    r = data[i]
-    g = data[i + 1]
-    b = data[i + 2]
-    a = data[i + 3]
-    if (a < 255 / 2) continue
-    col = rgbToHex(r, g, b)
-    if (!colors[col]) colors[col] = 0
-    colors[col]++
-  }
-  return colors
-}
+                    // trova il colore più ricorrente data una mappa di frequenza dei colori
+                    const findMostRecurrentColor = function (colorMap) {
+                      let highestValue = 0
+                      let mostRecurrent = null
+                      for (const hexColor in colorMap) {
+                        if (colorMap[hexColor] > highestValue) {
+                          mostRecurrent = hexColor
+                          highestValue = colorMap[hexColor]
+                        }
+                      }
+                      return mostRecurrent
+                    }
 
-// trova il colore più ricorrente data una mappa di frequenza dei colori
-const findMostRecurrentColor = function (colorMap) {
-  let highestValue = 0
-  let mostRecurrent = null
-  for (const hexColor in colorMap) {
-    if (colorMap[hexColor] > highestValue) {
-      mostRecurrent = hexColor
-      highestValue = colorMap[hexColor]
-    }
-  }
-  return mostRecurrent
-}
+                    // converte un valore in rgb a un valore esadecimale
+                    const rgbToHex = function (r, g, b) {
+                      if (r > 255 || g > 255 || b > 255) {
+                        throw 'Invalid color component'
+                      } else {
+                        return ((r << 16) | (g << 8) | b).toString(16)
+                      }
+                    }
 
-// converte un valore in rgb a un valore esadecimale
-const rgbToHex = function (r, g, b) {
-  if (r > 255 || g > 255 || b > 255) {
-    throw 'Invalid color component'
-  } else {
-    return ((r << 16) | (g << 8) | b).toString(16)
-  }
-}
+                    // inserisce degli '0' se necessario davanti al colore in esadecimale per renderlo di 6 caratteri
+                    const pad = function (hex) {
+                      return ('000000' + hex).slice(-6)
+                    }
 
-// inserisce degli '0' se necessario davanti al colore in esadecimale per renderlo di 6 caratteri
-const pad = function (hex) {
-  return ('000000' + hex).slice(-6)
-}
+                    const generateImage = function () {
+                      let imageSrc = `${songs.cover}`
+                        
+                      let reference = document.getElementById('colCove')
 
-const generateImage = function () {
-  let imageSrc =
-    `${songs.cover_medium}`
-  let reference = document.getElementById('container')
+                      reference.innerHTML = `
+                        <img
+                          src=${imageSrc}
+                          id="img"
+                          crossorigin="anonymous"
+                          onload="start()"
+                        />`
+                        start()
+                    }
+                    const changeBackgroundColor = function (color) {
+                      document.body.style.backgroundColor = color;
+                    }
 
-  reference.innerHTML = `
-    <img
-      src=${imageSrc}
-      id="img"
-      crossorigin="anonymous"
-      onload="start(${songs.cover_medium})"
-    />`
-}
+                    const start = function () {
+                      // prendo il riferimento all'immagine del dom
+                      let imgReference = document.querySelector('#img')
 
-const start = function () {
-  // prendo il riferimento all'immagine del dom
-  let imgReference = document.querySelector('#img')
+                      // creo il context 2d dell'immagine selezionata
+                      let context = draw(imgReference)
 
-  // creo il context 2d dell'immagine selezionata
-  let context = draw(imgReference)
+                      // creo la mappa dei colori più ricorrenti nell'immagine
+                      let allColors = getColors(context)
 
-  // creo la mappa dei colori più ricorrenti nell'immagine
-  let allColors = getColors(context)
+                      // trovo colore più ricorrente in esadecimale
+                      let mostRecurrent = findMostRecurrentColor(allColors)
 
-  // trovo colore più ricorrente in esadecimale
-  let mostRecurrent = findMostRecurrentColor(allColors)
+                      // se necessario, aggiunge degli '0' per rendere il risultato un valido colore esadecimale
+                      let mostRecurrentHex = pad(mostRecurrent)
 
-  // se necessario, aggiunge degli '0' per rendere il risultato un valido colore esadecimale
-  let mostRecurrentHex = pad(mostRecurrent)
+                      changeBackgroundColor(`#${mostRecurrentHex}`);
+                      // console.log(mostRecurrentHex)
+                    }
 
-  // console.log del risultato
-  console.log(mostRecurrentHex)
-}
+                    window.onload = function () {
+                      generateImage()
+                    }
 
-window.onload = function () {
-  generateImage(`${songs.cover_medium}`)
-}
-
-            
-
-        })
-    .catch((err) => {
-      console.log(err);
-    })
-}
+                      })
+                  .catch((err) => {
+                    console.log(err);
+                  })
+              }
 
 
-getAlbum();
+              getAlbum();
 
           

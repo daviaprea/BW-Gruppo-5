@@ -302,6 +302,11 @@ button:hover {
 
 @media screen and (max-width: 768px) {
   
+  .track__explicit {
+    display: none;
+  }
+
+
   #left-screen {
     display: none;
   }
