@@ -6,11 +6,13 @@ let feed=function(query)
     })
     .then(queryData=>{
         console.log(queryData);
-        document.querySelector(".artist-side-search").innerHTML=
+        document.querySelector("#search-result>div").innerHTML=
         `
-            <img class="rounded-circle align-self-start artist-search-img" src="${queryData.data[0].artist.picture}" alt="">
-            <h3 class="text-white fw-bold">${queryData.data[0].artist.name}</h3>
-            <span class="text-white fw-bold">${queryData.data[0].artist.type}</span>
+            <div class="artist-side-search d-flex flex-column justify-content-around h-100 p-3">
+                <img class="rounded-circle align-self-start artist-search-img" src="${queryData.data[0].artist.picture}" alt="">
+                <h3 class="text-white fw-bold">${queryData.data[0].artist.name}</h3>
+                <span class="text-white fw-bold">${queryData.data[0].artist.type}</span>
+            </div>
         `;
 
         document.querySelector(".song-side-search").innerHTML="";

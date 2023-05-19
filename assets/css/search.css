@@ -12,6 +12,10 @@
     top: 30%;
 }
 
+.song-side-search img{
+    height: 45px;
+}
+
 .artist-side-search{
     background-color: #1B1B1B;
     border-radius: 10px;
@@ -59,7 +63,7 @@
     margin-right: 1rem;
 }*/
 
-.col{
+.central-playlist-list .col{
     width: auto;
 }
 
