@@ -1,3 +1,4 @@
+
 fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=queen", {
   headers: {
     Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDYyM2M3ODc3NTgzYzAwMTRkMmNjYmMiLCJpYXQiOjE2ODQxNTk2MDksImV4cCI6MTY4NTM2OTIwOX0.RK6RE8424MDCQbvs8u0gvKiPo4MrR6-ww1HYYA6TexE"
@@ -26,6 +27,10 @@ fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=queen", {
       playButton.addEventListener("click", () => {
         fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${album.id}`)
           .then(res => {
+      const playButton = card.querySelector(".powerPlayer");
+      playButton.addEventListener("click", () => {
+        fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${album.id}`)
+          .then(res => {
             if (res.ok) {
               return res.json();
             } else {
@@ -46,25 +51,19 @@ fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=queen", {
               audioPlayer.src = firstSong.preview;
               console.log(firstSong.preview);
               
+              audioPlayer.src = firstSong.preview;
+              console.log(firstSong.preview);
               audioPlayer.addEventListener('canplay', function() {
                 audioPlayer.play();
               });
             }
-          })
-          .catch(err => {
+        })
+        .catch(err => {
             console.log(err);
-          });
-      });
+        });
     });
-  });
-let date = new Date();
-let hours = date.getHours();
-console.log(hours);
-let title = document.getElementById('buonaseraTitlePrincipale');
+});
 
-if(hours < 12) {
-}else if(hours >= 12) {
-    title.innerHTML = 'Buon pomeriggio';
-}else if(hours >= 18) {
-    title.innerHTML = 'Buonasera';
-}
+
+
+
