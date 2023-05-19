@@ -37,8 +37,15 @@ fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=queen", {
               const firstSong = albumObj.tracks.data[0];
               console.log(firstSong);
               const audioPlayer = document.querySelector('#audioPlayer');
+              const audioImg = document.getElementById('audioImg');
+              const audioTitle = document.getElementById('audioTitle');
+              const audioArtist = document.getElementById('audioArtist')
+              audioArtist.innerHTML = firstSong.artist.name;
+              audioTitle.innerHTML = firstSong.album.title;
+              audioImg.src = firstSong.album.cover_medium;
               audioPlayer.src = firstSong.preview;
               console.log(firstSong.preview);
+              
               audioPlayer.addEventListener('canplay', function() {
                 audioPlayer.play();
               });
@@ -50,10 +57,14 @@ fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=queen", {
       });
     });
 <<<<<<< HEAD
+<<<<<<< HEAD
   });
 =======
 });
 
+=======
+  });
+>>>>>>> origin/Branch-Gerald
 let date = new Date();
 let hours = date.getHours();
 console.log(hours);
@@ -65,4 +76,7 @@ if(hours < 12) {
 }else if(hours >= 18) {
     title.innerHTML = 'Buonasera';
 }
+<<<<<<< HEAD
 >>>>>>> origin/Gabriele-Branch
+=======
+>>>>>>> origin/Branch-Gerald
