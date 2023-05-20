@@ -119,12 +119,6 @@ body a:hover {
 }
 
 .track {
-<<<<<<< HEAD
-  border-top: 0px;
-}
-.track {
-=======
->>>>>>> origin/Branch-Gerald
   height: 42px;
   display: flex;
   flex-flow: row wrap;
@@ -159,6 +153,9 @@ body a:hover {
   width: 45%;
   margin-left: 30px;
   color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis !important;
 }
 .track__title.featured .title:after {
   content: "-";
@@ -217,7 +214,22 @@ body a:hover {
   font-size: small;
 }
 
-@media (max-width: 1200px) {
+#playNumber {
+  background: none;
+  position: absolute;
+  
+}
+
+
+@media (min-width: 769px) and (max-width:1879px){
+  #puntiOr{
+    display: none;
+  }
+
+  .track__plays {
+    display: none;
+  }
+  
   .tracks__heading__title {
     width: auto;
   }
@@ -234,6 +246,7 @@ body a:hover {
     display: none;
   }
 }
+
 .controls {
   width: 346px;
   display: flex;
@@ -274,4 +287,109 @@ button:hover {
 .buttoncontainer {
   margin-top: 2vh;
   margin-bottom: 2vh;
-}/*# sourceMappingURL=album.css.map */
+}
+
+#randomIcon {
+  display: none;
+}
+
+#playBtnMob {
+  display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+  
+  .track__explicit {
+    display: none;
+  }
+
+
+  #left-screen {
+    display: none;
+  }
+
+  #central-card {
+    display: flex !important;
+    flex-wrap: nowrap;
+}
+
+  #center-screen {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  #cardTitle {
+    display: none;
+  }
+
+  #introduction-title-card {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  #iconPuntini {
+    display: none !important;
+  } 
+
+  .track__number {
+    display: none !important;
+  }
+
+  #randomIcon {
+    color: white;
+    display: block;
+    background: none;
+  }
+
+  #respPlayBtn {
+    display: none;
+  }
+
+  #playBtnMob {
+    display: block;
+    background: none;
+  }
+
+  .section-title {
+    display: none !important;
+  }
+
+  #frecciaDx {
+    display: none !important;
+  }
+
+  .track__plays {
+    display: none !important;
+  }
+
+  .buttonContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .col-md-3{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  #right-screen {
+    display: none;
+  }
+
+  #right-aside{
+      display: none !important;
+  }
+
+  #left-aside{
+      display: none;
+  }
+
+  .buttonContainer div{
+    display: flex;
+    align-items: center;
+    
+  }
+}

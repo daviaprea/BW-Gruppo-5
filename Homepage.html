@@ -129,8 +129,10 @@
 
 
           <div id="topIconsContainer">  
-          <h2 id="buonaseraTitlePrincipale">Buonasera</h2>  <span class="d-inline d-md-none"><i class="far fa-bell"></i> <i class="fas fa-clock"></i><i class="fas fa-cog"></i></span>
+          <h2 id="buonaseraTitlePrincipale">Buongiorno</h2>  <span class="d-inline d-md-none"><i class="far fa-bell"></i> <i class="fas fa-clock"></i><i class="fas fa-cog"></i></span>
           </div>
+
+          <div class="titoletto d-md-none"><p>Musica</p> <p>Podcast Show</p> </div>
 
           <div class="row row-cols-xs-2 row-cols-sm-3" id="cardContainer">
             
@@ -506,7 +508,7 @@
                   <img src="assets/imgs/main/image07.jpeg" class="img-fluid aside-icons" alt="...">
                 </div>
                 <div class="col-md-8">
-                  <div class="card-body">
+                  <div class="card-body rightAsideCard">
                     <div  class="d-flex align-items-center justify-content-between"> 
                     <p class="card-text fw-bold righterColText">Davide Aprea</p>  <p class="righterP">4ore</p>
                     </div>
@@ -525,7 +527,7 @@
                   <img src="assets/imgs/main/image09.jpeg" class="img-fluid aside-icons" alt="...">
                 </div>
                 <div class="col-md-8">
-                  <div class="card-body">
+                  <div class="card-body rightAsideCard">
                     <div class="d-flex align-items-center justify-content-between"> 
                     <p class="card-text fw-bold righterColText">Gabriele Farci</p> <p class="righterP">4ore</p>
                     </div>
@@ -544,7 +546,7 @@
                   <img src="assets/imgs/main/image11.jpeg" class="img-fluid aside-icons" alt="...">
                 </div>
                 <div class="col-md-8">
-                  <div class="card-body">
+                  <div class="card-body rightAsideCard">
                     <div class="d-flex align-items-center justify-content-between">
                     <p class="card-text fw-bold righterColText">Manuel Altruda</p> <p class="righterP">4ore</p>
                     </div>
@@ -598,20 +600,21 @@
 
       <div>
         <audio id="audioPlayer" src=""></audio>
+        <audio id="audioPlayer" src=""></audio>
           <div class="player-middle d-flex justify-content-center gap-2">
               <button><i class="fas fa-random green-btn"></i></button>
               <button><i class="fas fa-step-backward text-white-50"></i></button>
-              <button><i class="fas fa-play-circle text-white fs-2"></i></button>
+              <button><i class="fas fa-play-circle fa-pause-circle text-white fs-2"></i></button>
               <button><i class="fas fa-step-forward text-white-50"></i></button>
               <button><i class="fas fa-undo green-btn"></i></button>
           </div>
           <div class="d-flex align-items-center gap-2">
-              <span class="text-white-50 song-artist">0:58</span>
+              <span class="text-white-50 song-artist" id="timePassing">0:58</span>
               <div class="slider">
                   <input type="range" class="range">
                   <progress min="0" max="100" value="50"></progress>
               </div>
-              <span class="text-white-50 song-artist">3:20</span>
+              <span class="text-white-50 song-artist" id="maxDurationTime">3:20</span>
           </div>
       </div>
 
@@ -630,7 +633,7 @@
 
   <script>
       let slider=document.querySelector(".range");
-      slider.addEventListener("input", ()=>{
+          slider.addEventListener("input", ()=>{
           progressBar=document.querySelector(".slider progress");
           progressBar.value=slider.value;
       })
@@ -652,6 +655,25 @@
         }
         isPlaying = !isPlaying;
       });
+
+      audioPlayer.addEventListener('timeupdate', () => {
+          let timePassing = document.getElementById('timePassing');
+          let maxDurationTime = document.getElementById('maxDurationTime');
+          const currentTime = audioPlayer.currentTime;
+          const duration = audioPlayer.duration;
+          const slider = document.querySelector('.range');
+          const progressBar = document.querySelector('.slider progress');
+          
+          const progressPercentage = (currentTime / duration) * 100;
+
+
+          slider.value = progressPercentage;
+          progressBar.value = progressPercentage;
+          timePassing.textContent = Math.floor(currentTime) + 's';
+          maxDurationTime.textContent = Math.floor(duration) + 's';
+
+          });
+
   </script>
 
 

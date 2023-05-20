@@ -166,11 +166,6 @@ body {
     height: 40px;
 }
 
-#play-button:hover {
-    width: 41px;
-    height: 41px;
-}
-
 #play-button i {
     padding: 10px;
 }
@@ -184,10 +179,6 @@ body {
     font-weight: bold;
     padding: 2px 10px;
     margin-left: 20px;
-}
-
-#following-button:hover {
-    border: 2px solid #fff;
 }
 
 #dots-h {
@@ -228,13 +219,17 @@ body {
     display: none;
 }
 
-.artist-song-content:hover p {
+#popular-songs div:hover p, #popular-songs div:hover #vertical-dots {
     display: none;
 }
 
-.artist-song-content:hover i {
+#popular-songs div:hover i {
     display: block;
     font-size: 12px;
+}
+
+#popular-songs div:hover .streaming-number, #popular-songs div:hover .duration {
+    display: block;
 }
 
 .streaming-number  {
@@ -279,11 +274,6 @@ body {
     border-radius: 100%;
     padding: 7px 10px;
     color: #fff;
-}
-
-.smallerNavLink:hover {
-    color: rgb(255, 255, 255);
-    font-size: 1.2rem;
 }
 
 .smallerNavLink:active {
@@ -332,7 +322,24 @@ body {
     align-items: center;
 }
 
-@media screen and (max-width: 550px) {
+#heart {
+    display: none;
+}
+
+#vertical-dots {
+    display: none;
+}
+
+#cover-favourite-songs {
+    width: 60px;
+    border-radius: 100%;
+} 
+
+#favourite-songs p {
+    margin: 0;
+}
+
+@media screen and (max-width: 750px) {
     #left-screen {
         display: none;
     }
@@ -373,5 +380,37 @@ body {
     .artist-song-content h6 {
         font-size: 16px;
         font-weight: normal;
+    }
+    .streaming-number {
+        display: none;
+    }
+    #popular-songs div:hover #vertical-dots {
+        display: block;
+    }
+    #play-button-mobile {
+        background-color: #3cd75f;
+        border: none;
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+        color: #fff;
+    }
+    #favourite-songs h5 {
+        margin: 0;
+        font-size: 17px;
+        font-weight: normal !important;
+    }
+    #favourite-songs p {
+        margin: 0;
+        font-size: 15px;
+        font-weight: 200 !important;
+    }
+    #cover-favourite-songs {
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+    }
+    #popular-songs div:hover .streaming-number, #popular-songs div:hover .duration {
+        display: none;
     }
 }
